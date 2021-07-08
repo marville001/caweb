@@ -4,6 +4,12 @@
   }
 }
 
+@mixin phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
 .home {
   background-color: #f4f4f4;
   min-height: 100vh;
@@ -46,6 +52,9 @@
 }
 
 .welcome {
+  @include phone {
+    padding: 0px 20px;
+  }
   .welcome-content {
     display: flex;
     gap: 20px;
@@ -70,6 +79,12 @@
           height: 300px;
         }
       }
+      @include phone() {
+        img {
+          width: 90vw;
+          height: 300px;
+        }
+      }
     }
     .welcome-right {
       flex: 1;
@@ -78,7 +93,7 @@
         align-items: center;
         flex-direction: column;
         p {
-          width: 500px;
+          // width: 500px;
           text-align: center;
         }
       }
@@ -94,6 +109,9 @@
 }
 
 .shrine {
+  @include phone {
+    padding: 0px 20px;
+  }
   .shrine-content {
     display: flex;
     gap: 20px;
@@ -116,6 +134,12 @@
         justify-content: center;
         img {
           width: 500px;
+          height: 300px;
+        }
+      }
+      @include phone() {
+        img {
+          width: 90vw;
           height: 300px;
         }
       }
@@ -143,6 +167,9 @@
 }
 
 .events {
+  @include phone {
+    padding: 0px 20px;
+  }
   .events-content {
     align-self: flex-start;
     .event {

@@ -33,6 +33,10 @@
     background-color: #fff;
     flex-direction: column;
 
+    @include phone {
+      padding: 0px 20px;
+    }
+
     .topNav {
       display: flex;
       justify-content: space-between;
