@@ -19,6 +19,7 @@
   color: #fff;
   border-radius: 0px;
   border: 1px solid var(--secondary-color);
+  margin: 20px 0px;
 }
 
 .hero {
@@ -151,7 +152,7 @@
         align-items: center;
         flex-direction: column;
         p {
-          width: 500px;
+          // width: 500px;
           text-align: center;
         }
       }
