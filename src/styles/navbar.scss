@@ -24,94 +24,144 @@
 
 .appBar {
   flex-grow: 1;
-  background-color: #ffffff;
-  box-shadow: none;
-
-  .topBar {
-    display: block;
-    display: flex;
-    justify-content: flex-end;
-    padding: 7px 16px;
-
-    .socialIcons {
-      display: flex;
-      flex-direction: row;
-    }
-    .socialLink {
-      margin: 0px 5px;
-    }
-    .socialLinkIcon {
-      color: orange;
-    }
-    .contactDet {
-      display: flex;
-      align-items: center;
-      margin: 0px 10px;
-      color: #000;
-    }
-  }
+  max-height: 140px;
+  z-index: 23;
 
   .nav {
-    justify-content: space-between;
+    // width: 1024px;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
 
-    h1 {
-      color: #000;
-    }
-    .open {
-      @include tablet {
-        transform: translateY(0);
-      }
-    }
-    ul {
+    .topNav {
       display: flex;
-      
-      @include tablet {
-        background-color: #000;
-        transform: translateY(-100%);
-        position: absolute;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        padding: 50px;
-        height: 80vh;
-        top: -40px;
-        left: 0px;
-        right: 0px;
-        transition: all 0.3s linear;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      .logo {
+        color: blue;
       }
 
-      li {
-        margin: 0px 5px;
-        padding: 0px 2px;
-
-        a {
-          font-size: 14px;
-          color: rgb(56, 54, 54);
-
-          @include tablet {
-            font-size: 20px;
-            color: rgb(216, 216, 216);
-          }
-
-          @include desktop {
+      ul {
+        display: flex;
+        li {
+          a {
             font-size: 16px;
-            margin: 0px 10px;
+            margin-left: 20px;
+            &:hover {
+              color: var(--secondary-color);
+            }
           }
+        }
+        @include tablet {
+          display: none;
+        }
+        svg {
+          color: var(--primary-color);
+          font-size: 22px;
+          cursor: pointer;
+          margin-left: 20px;
+        }
+      }
+      .menuButton {
+        color: #fff;
+        padding: 2px;
+        border-radius: 2px;
+        background-color: #173355;
+        display: none;
+        z-index: 101;
+
+        svg {
+          font-size: 30px;
+        }
+
+        @include tablet {
+          display: block;
         }
       }
     }
-    .menuButton {
-      background-color: #000;
-      padding: 2px;
-      border-radius: 2px;
-      display: none;
 
-      svg {
-        font-size: 30px;
-      }
+    .navs {
+      display: flex;
+      background-color: var(--primary-color);
+      height: 40px;
+      align-items: center;
 
       @include tablet {
-        display: block;
+        background-color: transparent;
+        height: 0px;
+      }
+
+      .open {
+        @include tablet {
+          transform: translateY(0);
+        }
+      }
+
+      ul {
+        display: flex;
+        z-index: 100;
+        width: 100%;
+        justify-content: space-between;
+
+        @include tablet {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        @include tablet {
+          background-color: #173355;
+          transform: translateY(-100%);
+          position: absolute;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          overflow: hidden;
+          // width: 100vw;
+          padding: 100px;
+          // height: 80vh;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          transition: all 0.3s linear;
+        }
+
+        li {
+          height: 40px;
+          display: flex;
+          align-items: center;
+          padding: 0px 17px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #fff;
+            @include tablet {
+              background-color: transparent;
+            }
+
+            a {
+              color: var(--secondary-color);
+            }
+          }
+          a {
+            font-size: 15px;
+            color: #fff;
+
+            @include tablet {
+              font-size: 20px;
+              color: rgb(216, 216, 216);
+            }
+
+            @include desktop {
+              font-size: 16px;
+              margin: 0px 10px;
+            }
+            &:hover {
+              color: var(--secondary-color);
+            }
+          }
+        }
       }
     }
   }
