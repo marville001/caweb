@@ -20,7 +20,8 @@ const PageHeader = ({image, subtitle,title}) => {
             }}>{subtitle}</h3>
             <h1 style={{
                 fontSize:"60px",
-                color:"var(--primary-color)"
+                color:"var(--primary-color)",
+                textAlign:"center"
             }}>{title}</h1>
         </div>
     )
