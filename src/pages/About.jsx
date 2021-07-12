@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import PageHeader from "../components/PageHeader";
+import eventsBg from "../images/events-header-bg.jpg";
+
+
 
 const About = () => {
-    return (
-        <div>
-            <h2>About</h2>
-        </div>
-    )
-}
+  return (
+    <div>
+      <PageHeader image={eventsBg} title="About Us" subtitle="Learn More" />
+    </div>
+  );
+};
 
-export default About
+export default About;

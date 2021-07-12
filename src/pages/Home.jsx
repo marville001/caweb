@@ -19,7 +19,7 @@ const Home = (props) => {
             <p>
               <i>"All for Jesus, Nothing for me."</i>
             </p>
-            <Button className="find-out-btn">Find Out What's Happening</Button>
+            <Button  href="/events" className="find-out-btn button">Find Out What's Happening</Button>
           </div>
         </div>
       </div>

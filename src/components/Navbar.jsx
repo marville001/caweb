@@ -23,8 +23,8 @@ const Navbar = () => {
                             DskyUrT Csdatdhfolhic Chjhajplkakincy</h1>
                         <ul>
                             <li>
-                                <a href="/">About</a>
-                                <a href="/">Contact</a>
+                                <a href="/about">About</a>
+                                <a href="/contact">Contact</a>
                             </li>
                             <SearchOutlinedIcon />
                         </ul>
@@ -38,8 +38,8 @@ const Navbar = () => {
                     <div className="container">
                         <ul className={navOpen ? " open" : ""}>
                             <li onClick={() => setNavOpen(false)}><a style={{ marginLeft: "0px" }} href="/home">Home</a></li>
-                            <li onClick={() => setNavOpen(false)}><a href="/news">News</a></li>
                             <li onClick={() => setNavOpen(false)}><a href="/events-activities">Events & Activities</a></li>
+                            <li onClick={() => setNavOpen(false)}><a href="/news">News</a></li>
                             <li onClick={() => setNavOpen(false)}><a href="/leadership">Leadership</a></li>
                             <li onClick={() => setNavOpen(false)}><a href="/scc">SCC</a></li>
                             <li onClick={() => setNavOpen(false)}><a href="/gallery">Gallery</a></li>
