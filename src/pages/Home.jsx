@@ -19,7 +19,7 @@ const Home = (props) => {
             <p>
               <i>"All for Jesus, Nothing for me."</i>
             </p>
-            <Button  href="/events" className="find-out-btn button">Find Out What's Happening</Button>
+            <Button  href="/events-activities" className="find-out-btn button">Find Out What's Happening</Button>
           </div>
         </div>
       </div>
@@ -157,7 +157,7 @@ const Home = (props) => {
           </p>
           <p>
             We hope that you enjoy our latest message and many other messages
-            from Garden Valley Church.
+            from us.
           </p>
 
           <Button>Watch Now</Button>
