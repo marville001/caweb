@@ -1,12 +1,9 @@
 import React from "react";
 
 import "../styles/home.scss";
-import shrine from "../images/shrine.jpg";
 import dkut from "../images/dkut.jpeg";
 import Title from "../components/Title";
-import { Button, TextField } from "@material-ui/core";
-import Footer from "../components/Footer";
-import { TextFields } from "@material-ui/icons";
+import { Button } from "@material-ui/core";
 const Home = (props) => {
   console.log(props);
   return (
@@ -167,19 +164,9 @@ const Home = (props) => {
         </div>
       </div>
 
-      {/* News and Events */}
-      <div className="subscribe">
-        <div className="container subscribe-content">
-          <h1>News and Events</h1>
-          <input placeholder="Email" />
-          <Button variant="contained" color="primary">
-            Subscribe now
-          </Button>
-        </div>
-      </div>
-
+      
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

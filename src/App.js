@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom"
 import BounceLoader from "react-spinners/BounceLoader"
 import "./styles/main.scss"
 import Loading from "./components/Loading";
+import Footer from "./components/Footer";
 
 const loading = (
   <div style={{
@@ -63,6 +64,8 @@ class App extends React.Component {
             <Route exact path="/prayers" render={props => <Prayers {...props} />} />
             <Route exact path="/contact" render={props => <Contact {...props} />} />
           </Switch>
+          {/* Footer */}
+          <Footer />
         </React.Suspense>
       </div>
     );
