@@ -27,12 +27,13 @@
     align-items: center;
 
     h1{
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       font-size: 25px;
+      color: #1d1e25;
     }
 
     input{
-      width: 300px;
+      width: 400px;
       border: 1px solid #6f7286;
       border-radius: 0;
       padding: 10px 20px;
@@ -46,7 +47,7 @@
       background-color: var(--secondary-color);
       border-radius: 0;
       margin: 20px;
-      width: 300px;
+      width: 400px;
       height: 40px;
       font-size: 14px;
       letter-spacing: .1rem;
