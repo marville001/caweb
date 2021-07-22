@@ -1,16 +1,9 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { Button, Paper } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
 
-const useStyles = makeStyles((theme) => ({
-  carousel: {
-    // backgroundColor:"transparent"
-  },
-}));
 
 const Item = ({item}) => {
-  const classes = useStyles();
   const {title,subtitle,btntext,btnlink, image} = item
   return (
     <Paper

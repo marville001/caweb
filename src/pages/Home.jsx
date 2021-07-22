@@ -1,7 +1,6 @@
 import React from "react";
 
 import "../styles/home.scss";
-import dkut from "../images/dkut.jpeg";
 import Title from "../components/Title";
 import { Button } from "@material-ui/core";
 import HomeCarousel from "../components/HomeCarousel";
