@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Title = ({ title, variant }) => {
-    return (
-        <h2 className="title" style={{ color: variant === "primary" ? "#fff" : "#173355" }}>
-            {title}
-        </h2>
-    )
-}
+  return (
+    <div className="title">
+      <div className="container">
+        <h3>{title}</h3>
+      </div>
+    </div>
+  );
+};
 
-export default Title
+export default Title;

@@ -4,56 +4,34 @@ import "../styles/home.scss";
 import dkut from "../images/dkut.jpeg";
 import Title from "../components/Title";
 import { Button } from "@material-ui/core";
+import HomeCarousel from "../components/HomeCarousel";
 const Home = (props) => {
   console.log(props);
   return (
     <div className="home">
       {/* Hero Section */}
       <div className="hero">
-        <div className="hero-content">
-          <div className="container hc">
-            <h1>
-              Blessed Sister Irene Stefani Catholic Action Dedan Kimathi
-              University Of Technology
-            </h1>
-            <p>
-              <i>"All for Jesus, Nothing for me."</i>
-            </p>
-            <Button  href="/events-activities" className="find-out-btn button">Find Out What's Happening</Button>
-          </div>
+            <HomeCarousel />
+      </div>
+
+      <div className="new-mass">
+        <div className="container new-mass-content">
+          <h1>NEW! MASS TIME</h1>
+          <h2>Weekdays Mass: Wed 1:15 pm, Thur 4:00 pm</h2>
+          <h3>Sunday Mass: 9:00 am - 11:00 am</h3>
+
+          <h4>Please wear a mask if you are not vaccinated</h4>
+
+          <p>all are welcome!</p>
         </div>
       </div>
 
       {/* Welcome */}
       <div className="welcome">
         <div className="container welcome-content">
-          <div className="welcome-left">
-            <img alt="Welcome to DeKUTCC" src={dkut} />
-          </div>
-          <div className="welcome-right">
-            <Title title="Welcome to DeKUTCC" />
-            <p>
-              The DeKUT Catholic Action Chaplaincy gets its identity from
-              Blessed sister Irene Stefani? More interestingly, its not Just the
-              name but also the Blessed Sister Irene Stefani Shrine whose
-              fountains jet out water meters high as a symbol of life, is
-              Errected at DeKUT's Hero's Garden
-            </p>
-            <br />
-            <p>
-              Her essence at the Hero's garden if found from her acts of
-              courage, Charity and faith. Her famous quote,"All for Jesus and
-              Nothing For me", is the DeKUT CA motto!
-            </p>
-
-            <Button
-              className="learn-more-btn"
-              color="secondary"
-              variant="contained"
-            >
-              Learn More
-            </Button>
-          </div>
+          <h1>WELCOME TO DEKUT CATHOLIC CHAPLAINCY</h1>
+          <p>We come together as a Parish family. As a Eucharistic people celebrating our diverse cultures, we unite as one Body of Christ strengthened by the Sacraments and nourished by the Living Word of God. As a Faith Community striving to become disciples of Jesus Christ our Lord, we commit ourselves to serve one another and the community at large.</p>
+          <h3><i>"All are welcome"</i></h3>
         </div>
       </div>
 
@@ -106,8 +84,9 @@ const Home = (props) => {
 
       {/* Events */}
       <div className="events">
-        <div className="container events-content">
+        
           <Title title="Event Calendar" />
+        <div className="container events-content">
           <hr />
           <div className="event">
             <div className="event-date">

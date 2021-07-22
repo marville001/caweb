@@ -38,13 +38,23 @@ ul{
 }
 
 .title{
+  background-color: var(--secondary-color);
+  padding: 10px;
+
+}
+.title h3{
+  font-size: 40px;
+  color: #fff;
+}
+
+.title-heading{
   font-size: 40px;
   position: relative;
   margin: 60px 0px ;
 
 }
 
-.title::after{
+.title-heading::after{
   content: "";
   position: absolute;
   bottom: -20px;
