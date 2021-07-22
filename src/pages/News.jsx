@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+
+import PageHeader from "../components/PageHeader";
+import newsBg from "../images/news-header-bg.jfif";
 
 const News = () => {
-    return (
-        <div>
-            <h2>News</h2>
-        </div>
-    )
-}
+  return (
+    <div className="news">
+      <PageHeader image={newsBg} title="NEWS" />
+    </div>
+  );
+};
 
-export default News
+export default News;

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/events.scss";
 
-import eventsBg from "../images/events-header-bg.jpg";
+import eventsBg from "../images/activities-header-bg.jfif";
 import PageHeader from "../components/PageHeader";
 import EventCard from "../components/EventCard";
 

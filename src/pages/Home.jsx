@@ -10,7 +10,7 @@ const Home = (props) => {
     <div className="home">
       {/* Hero Section */}
       <div className="hero">
-            <HomeCarousel />
+        <HomeCarousel />
       </div>
 
       <div className="new-mass">
@@ -29,8 +29,17 @@ const Home = (props) => {
       <div className="welcome">
         <div className="container welcome-content">
           <h1>WELCOME TO DEKUT CATHOLIC CHAPLAINCY</h1>
-          <p>We come together as a Parish family. As a Eucharistic people celebrating our diverse cultures, we unite as one Body of Christ strengthened by the Sacraments and nourished by the Living Word of God. As a Faith Community striving to become disciples of Jesus Christ our Lord, we commit ourselves to serve one another and the community at large.</p>
-          <h3><i>"All are welcome"</i></h3>
+          <p>
+            We come together as a Parish family. As a Eucharistic people
+            celebrating our diverse cultures, we unite as one Body of Christ
+            strengthened by the Sacraments and nourished by the Living Word of
+            God. As a Faith Community striving to become disciples of Jesus
+            Christ our Lord, we commit ourselves to serve one another and the
+            community at large.
+          </p>
+          <h3>
+            <i>"All are welcome"</i>
+          </h3>
         </div>
       </div>
 
@@ -83,8 +92,7 @@ const Home = (props) => {
 
       {/* Events */}
       <div className="events">
-        
-          <Title title="Event Calendar" />
+        <Title title="Event Calendar" />
         <div className="container events-content">
           <hr />
           <div className="event">
@@ -142,9 +150,17 @@ const Home = (props) => {
         </div>
       </div>
 
-      
-      {/* Footer */}
-      {/* <Footer /> */}
+      <div className="youtube-video">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ioMv8_pMM_o"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
   );
 };

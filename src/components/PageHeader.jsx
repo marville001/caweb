@@ -8,6 +8,8 @@ const PageHeader = ({image, subtitle,title}) => {
             backgroundImage:`url(${image})`,
             height:"40vh",
             backgroundPosition:"center",
+            backgroundRepeat:"no-repeat",
+            backgroundSize:"cover",
             display:"flex",
             justifyContent:"center",
             alignItems:"center",

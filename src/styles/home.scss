@@ -304,3 +304,17 @@
     }
   }
 }
+
+
+.youtube-video{
+  height: 440px;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+
+  iframe{
+    height: 400px;
+    width: 600px;
+    margin: 0px auto;
+  }
+}
