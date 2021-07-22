@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+
+import PageHeader from "../components/PageHeader";
+import prayersBg from "../images/prayers-header-bg.jpg";
+
 
 const Prayers = () => {
-    return (
-        <div>
-            <h2>Prayers</h2>
-        </div>
-    )
-}
+  return (
+    <div>
+      <PageHeader image={prayersBg} title="PRAYERS" />
+    </div>
+  );
+};
 
-export default Prayers
+export default Prayers;

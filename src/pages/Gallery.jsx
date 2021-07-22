@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import eventsBg from "../images/events-header-bg.jpg";
+import galleryBg from "../images/gallery-header-bg.jfif";
 import PageHeader from "../components/PageHeader";
 import Loading from "../components/Loading";
 import GalleryContainer from "../components/GalleryContainer";
@@ -34,7 +34,7 @@ const Gallery = () => {
 
   return (
     <div className="gallery">
-      <PageHeader image={eventsBg} title="GALLERY" subtitle="our" />
+      <PageHeader image={galleryBg} title="GALLERY" subtitle="our" />
       <div style={{
           display:"flex",
           justifyContent:"center",

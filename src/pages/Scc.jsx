@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import PageHeader from "../components/PageHeader";
+import newsBg from "../images/news-header-bg.jfif";
 
 const Scc = () => {
-    return (
-        <div>
-            <h2>Small Christian Community</h2>
-        </div>
-    )
-}
+  return (
+    <div>
+      <PageHeader image={newsBg} variant="secondary" title="SMALL CHRISTIAN COMUNITIES" />
+    </div>
+  );
+};
 
-export default Scc
+export default Scc;

@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+
+import PageHeader from "../components/PageHeader";
+import readingsBg from "../images/readings-header-bg.jpg";
+
 
 const Readings = () => {
-    return (
-        <div>
-            <h2>Readings</h2>
-        </div>
-    )
-}
+  return (
+    <div>
+      <PageHeader image={readingsBg} title="READINGS" />{" "}
+    </div>
+  );
+};
 
-export default Readings
+export default Readings;
