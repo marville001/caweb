@@ -136,6 +136,10 @@
 }
 
 .welcome {
+  @include phone {
+    padding: 0px 20px;
+  }
+
   .welcome-content {
     height: 250px;
     display: flex;
@@ -145,11 +149,16 @@
 
     h1{
       margin-bottom: 20px;
+      text-align: center;
     }
 
     p{
       width: 600px;
       text-align: center;
+
+      @include phone {
+        width: auto;
+      }
     }
 
     h3{
@@ -269,6 +278,10 @@
 }
 
 .live {
+  @include phone {
+    padding: 0px 20px;
+  }
+
   background-color: #fff;
   margin-bottom: 0px;
   padding: 10px;
@@ -311,6 +324,10 @@
   padding: 20px 0px;
   display: flex;
   justify-content: center;
+
+  @include phone {
+    padding: 20px 20px;
+  }
 
   iframe{
     height: 400px;
