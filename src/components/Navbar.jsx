@@ -20,7 +20,7 @@ const Navbar = () => {
                 <div className="topNav">
                     <div className="container justify-between">
                         <h1 className="logo">
-                            DkUT Catholic Chaplaincy</h1>
+                            DeKUT Catholic Chaplaincy</h1>
                         <ul>
                             <li>
                                 <a href="/about">About</a>
