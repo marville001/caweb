@@ -1,7 +1,7 @@
 import React from "react";
 
 import PageHeader from "../components/PageHeader";
-import prayersBg from "../images/prayers-header-bg.jpg";
+import prayersBg from "../images/prayers-header-bg.jfif";
 
 
 const Prayers = () => {

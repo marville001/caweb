@@ -1,7 +1,7 @@
 import React from "react";
 
 import PageHeader from "../components/PageHeader";
-import readingsBg from "../images/readings-header-bg.jpg";
+import readingsBg from "../images/readings-header-bg.jfif";
 
 
 const Readings = () => {
