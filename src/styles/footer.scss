@@ -19,6 +19,10 @@
 .subscribe{
   height: 40vh;
 
+  @include phone{
+    padding: 20px;
+  }
+
   .subscribe-content{
     height: 100%;
     display: flex;
