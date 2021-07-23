@@ -1,0 +1,135 @@
+@mixin tablet {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+.sunday-news {
+  .sunday-news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 0px;
+    gap: 20px;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include phone {
+      padding: 20px 30px;
+      grid-template-columns: 1fr;
+    }
+
+    .news {
+      box-shadow: 8px 8px 12px #eee;
+      .news-header {
+        width: 100%;
+        min-height: 200px;
+        background: url("/images/bg.jpg"), #fff;
+        background-position: center;
+
+        color: #fff;
+        font-weight: 900;
+        transition: background 0.4s ease;
+        cursor: pointer;
+
+        .news-header-content {
+          background-color: rgba(0, 0, 0, 0.2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          min-height: inherit;
+          padding: 20px;
+
+          h2 {
+            text-align: center;
+          }
+        }
+
+        &:hover {
+          .news-header-content {
+            background-color: rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+
+      .news-content {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        p {
+          line-height: 1.2rem;
+          font-weight: 400;
+          letter-spacing: 0.08rem;
+        }
+        .button {
+          margin: 10px 5px;
+          color: #fff;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
+
+.news-modal {
+  z-index: 333;
+  padding: 20px;
+
+  .news-modal-content {
+    background-color: #fff;
+    width: 600px;
+    overflow: scroll;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include tablet {
+      width: 80%;
+    }
+
+    .news-modal-close {
+      display: flex;
+      justify-content: flex-end;
+
+      svg {
+        background-color: rgb(201, 201, 201);
+        font-size: 30px;
+        cursor: pointer;
+        padding: 0px;
+        color: rgb(247, 4, 4);
+        width: 45px;
+        height: 45px;
+        border-bottom-left-radius: 10px;
+        position: fixed;
+      }
+    }
+
+    .content {
+      padding: 50px 30px 20px 30px;
+      img {
+        width: 100%;
+        max-height: 250px;
+      }
+
+      h1 {
+        margin: 20px 0px;
+      }
+    }
+  }
+}

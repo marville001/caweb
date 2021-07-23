@@ -24,32 +24,22 @@
 
 .events-container {
   margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  @include mini-desktop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  
+  @include phone() {
+    padding: 20px;
     justify-content: center;
+    grid-template-columns: 1fr;
   }
   .event {
+    grid: 1;
     display: flex;
     align-items: center;
     margin: 15px 0px;
     border: 2px solid #eee;
     box-shadow: 2px 2px 8px rgb(136, 136, 136);
-
-    @include desktop {
-        width: 460px;
-    }
-    @include mini-desktop{
-        width: 800px;
-    }
-    @include tablet {
-      width: 80%;
-    }
-    @include phone {
-      width: 90%;
-    }
 
     .event-left {
       position: relative;
