@@ -100,8 +100,12 @@
     }
 
     @include tablet {
-      width: 80%;
-    }
+        width: 80%;
+      }
+
+      @include phone {
+        width: calc(100% - 20px);
+      }
 
     .news-modal-close {
       display: flex;
@@ -122,6 +126,10 @@
 
     .content {
       padding: 50px 30px 20px 30px;
+      
+      @include phone {
+          padding: 50px 10px 20px 10px;
+      }
       img {
         width: 100%;
         max-height: 250px;
