@@ -1,6 +1,5 @@
-import { IconButton } from "@material-ui/core";
-import { CloseOutlined } from "@material-ui/icons";
 import React from "react";
+import { CloseOutlined } from "@material-ui/icons";
 
 const ReadNewsModal = ({ open, news, closeNews }) => {
   const newsClick = (e) => {
