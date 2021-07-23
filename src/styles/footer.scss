@@ -45,6 +45,10 @@
       outline: none;
       height: 40px;
       color: #6f7286;
+
+      @include phone{
+        width: 100%;
+      }
     }
 
     button{
@@ -55,6 +59,10 @@
       height: 40px;
       font-size: 14px;
       letter-spacing: .1rem;
+
+      @include phone{
+        width: 100%;
+      }
     }
   }
 }
