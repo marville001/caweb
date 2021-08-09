@@ -14,7 +14,7 @@ const Gallery = () => {
   const fetchData = async (page) => {
     setLoading(true);
     const response = await axios.get(
-      `https://api.unsplash.com/search/photos?page=${page}&per_page=20&query=office&client_id=${api}`
+      `https://api.unsplash.com/search/photos?page=${page}&per_page=20&query=catholic&client_id=${api}`
     );
 
     const data = await response.data;
