@@ -2,7 +2,7 @@ import React from "react";
 
 import "../styles/pageheader.scss";
 
-const PageHeader = ({ image, variant, subtitle, title }) => {
+const PageHeader = ({ image, subtitle, title }) => {
   return (
     <div
       style={{
@@ -36,7 +36,7 @@ const PageHeader = ({ image, variant, subtitle, title }) => {
         <h1
           style={{
             fontSize: "60px",
-            color: variant ? `var(--${variant}-color` : `var(--primary-color)`,
+            color: "#fff",
             textAlign: "center",
           }}
         >
