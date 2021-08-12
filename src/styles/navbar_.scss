@@ -1,0 +1,163 @@
+@mixin desktop {
+  @media (min-width: 1124px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin tablet-large {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+.appBar {
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+  position: static;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  z-index: 15;
+
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    // position: relative;
+    z-index: 2;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px 0px;
+    width: 100%;
+
+    .logo {
+      font-size: 18px;
+      color: #ffffff;
+    }
+    .nav_left {
+      margin: 0px 30px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 15;
+      .nav_item {
+        
+        font-size: 16px;
+        margin: 0px 20px;
+        color: #fff;
+      }
+      .nav_item_menu{
+        display: none;
+        @include tablet {
+          display: block;
+        }
+      }
+      .menu{
+        position: relative;
+        &:hover{
+          .menu-items{
+            display: flex;
+          }
+        }
+        @include tablet {
+          display: none;
+        }
+
+        span{
+          cursor: pointer;
+        }
+
+        .menu-items{
+          display: none;
+          position: absolute;
+          background-color: #ffffff;
+          flex-direction: column;
+          padding: 10px;
+          box-shadow: 0px 2px 12px rgb(114, 112, 112);
+          // margin-top: 10px;
+          
+          .nav_item {
+            color: var(--primary-color);
+            margin: 5px;
+          }
+        }
+      }
+
+      @include tablet {
+        background-color: #173355;
+        transform: translateY(-100%);
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        padding: 100px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        transition: all 0.3s linear;
+
+        .nav_item{
+          color: #fff;
+        }
+      }
+
+    }
+    .open {
+      @include tablet {
+        transform: translateY(0);
+      }
+    }
+
+    .nav_right{
+      display: flex;
+      .login_btn{
+        margin: 0px 30px;
+        background-color: var(--secondary-color);
+        color: #fff;
+        font-size: 14px;
+        padding: 8px 25px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+      }
+
+      .menuButton {
+        color: #173355;
+        padding: 2px;
+        border-radius: 2px;
+        background-color: #fff;
+        display: none;
+        margin-left: 10px;
+        z-index: 101;
+
+        svg {
+          font-size: 30px;
+        }
+
+        @include tablet {
+          display: block;
+        }
+      }
+    }
+  }
+}

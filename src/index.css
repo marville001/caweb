@@ -86,17 +86,19 @@ ul{
 }
 
 .container{
-  /* background-color: #000; */
+  max-width: 1180px;
+  margin: 0px auto;
   padding: 0;
+  padding: 0px 20px;
 }
 
 @media screen and (min-width: 600px){
   .container{
-    width: 90vw;
-    margin: 0 auto;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
   }
 }
-
+/*
 @media screen and (min-width: 900px){
   .container{
     width: 80vw;
@@ -115,4 +117,4 @@ ul{
     width: 75vw;
     margin: 0 auto;
   }
-}
+} */

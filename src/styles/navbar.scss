@@ -67,22 +67,7 @@
           margin-left: 20px;
         }
       }
-      .menuButton {
-        color: #fff;
-        padding: 2px;
-        border-radius: 2px;
-        background-color: #173355;
-        display: none;
-        z-index: 101;
-
-        svg {
-          font-size: 30px;
-        }
-
-        @include tablet {
-          display: block;
-        }
-      }
+      
     }
 
     .navs {

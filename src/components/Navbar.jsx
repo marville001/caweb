@@ -6,6 +6,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import ClearIcon from '@material-ui/icons/Clear';
 import "../styles/navbar.scss"
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [navOpen, setNavOpen] = useState(false)
@@ -19,12 +20,11 @@ const Navbar = () => {
             <div className="nav">
                 <div className="topNav">
                     <div className="container justify-between">
-                        <h1 className="logo">
-                            DeKUT Catholic Chaplaincy</h1>
+                        <h1 className="logo">DeKUT Catholic Chaplaincy</h1>
                         <ul>
                             <li>
-                                <a href="/about">About</a>
-                                <a href="/contact">Contact</a>
+                                <Link to="/about">About</Link>
+                                <Link to="/contact">Contact</Link>
                             </li>
                             <SearchOutlinedIcon />
                         </ul>
@@ -37,15 +37,15 @@ const Navbar = () => {
                 <div className="navs">
                     <div className="container">
                         <ul className={navOpen ? " open" : ""}>
-                            <li onClick={() => setNavOpen(false)}><a style={{ marginLeft: "0px" }} href="/home">Home</a></li>
-                            <li onClick={() => setNavOpen(false)}><a href="/events-activities">Events & Activities</a></li>
-                            <li onClick={() => setNavOpen(false)}><a href="/news">News</a></li>
-                            <li onClick={() => setNavOpen(false)}><a href="/leadership">Leadership</a></li>
-                            <li onClick={() => setNavOpen(false)}><a href="/scc">SCC</a></li>
-                            <li onClick={() => setNavOpen(false)}><a href="/gallery">Gallery</a></li>
-                            <li onClick={() => setNavOpen(false)}><a href="/library">Library</a></li>
-                            <li onClick={() => setNavOpen(false)}><a href="/readings">Readings</a></li>
-                            <li onClick={() => setNavOpen(false)}><a style={{ marginRight: "0px" }} href="/prayers">Prayers</a></li>
+                            <li onClick={() => setNavOpen(false)}><Link style={{ marginLeft: "0px" }} to="/home">Home</Link></li>
+                            <li onClick={() => setNavOpen(false)}><Link to="/events-activities">Events & Activities</Link></li>
+                            <li onClick={() => setNavOpen(false)}></li>
+                            <li onClick={() => setNavOpen(false)}><Link to="/leadership">Leadership</Link></li>
+                            <li onClick={() => setNavOpen(false)}><Link to="/scc">SCC</Link></li>
+                            <li onClick={() => setNavOpen(false)}><Link to="/gallery">Gallery</Link></li>
+                            <li onClick={() => setNavOpen(false)}><Link to="/library">Library</Link></li>
+                            <li onClick={() => setNavOpen(false)}><Link to="/readings">Readings</Link></li>
+                            <li onClick={() => setNavOpen(false)}><Link style={{ marginRight: "0px" }} to="/prayers">Prayers</Link></li>
                         </ul>
                     </div>
                 </div>

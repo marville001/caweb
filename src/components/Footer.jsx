@@ -14,7 +14,7 @@ const Footer = () => {
       {/* News and Events */}
       <div className="subscribe">
         <div className="container subscribe-content">
-          <h1>News and Events</h1>
+          <h1>Receive News and Events</h1>
           <input placeholder="Email" />
           <Button variant="contained" color="primary">
             Subscribe now

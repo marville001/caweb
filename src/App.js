@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar_";
 
 import { Switch, Route } from "react-router-dom"
 import BounceLoader from "react-spinners/BounceLoader"
