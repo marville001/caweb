@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 
-import { AppBar, IconButton } from "@material-ui/core";
+import {  IconButton } from "@material-ui/core";
 
 import MenuIcon from "@material-ui/icons/Menu";
-import Popover from '@material-ui/core/Popover';
 
 import ClearIcon from "@material-ui/icons/Clear";
 import "../styles/navbar_.scss";
@@ -20,6 +19,7 @@ const Navbar = () => {
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
 
+  console.log(id, setAnchorEl);
   return (
     <div className="appBar">
       <div className="container navbar">
@@ -32,10 +32,7 @@ const Navbar = () => {
           </Link>
           <Link onClick={() => setNavOpen(false)} className="nav_item" to="/news">
             News
-          </Link> 
-          <Link onClick={() => setNavOpen(false)} className="nav_item" to="/events">
-            Events
-          </Link>          
+          </Link>         
           <Link onClick={() => setNavOpen(false)} className="nav_item" to="/gallery">
             Gallery
           </Link>

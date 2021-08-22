@@ -7,17 +7,7 @@ import "./styles/main.scss"
 import Loading from "./components/Loading";
 import Footer from "./components/Footer";
 
-const loading = (
-  <div style={{
-    height: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column-reverse"
-  }}>
-    <BounceLoader color="crimson" loading={true} size={20} />
-  </div>
-)
+
 
 // Pages
 const Home = React.lazy(() => import("./pages/Home"))
@@ -31,6 +21,19 @@ const Prayers = React.lazy(() => import("./pages/Prayers"))
 const Readings = React.lazy(() => import("./pages/Readings"))
 const Scc = React.lazy(() => import("./pages/Scc"))
 const News = React.lazy(() => import("./pages/News"))
+
+
+const loading = (
+  <div style={{
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column-reverse"
+  }}>
+    <BounceLoader color="crimson" loading={true} size={20} />
+  </div>
+)
 
 class App extends React.Component {
   constructor(props) {
