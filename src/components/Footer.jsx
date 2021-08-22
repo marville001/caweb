@@ -24,7 +24,7 @@ const Footer = () => {
       <div className="footer">
         <div className="container footer-content">
           <div className="footer-logo">
-            <h2>Logo</h2>
+            <h2>DEKUTCC</h2>
           </div>
 
           <div className="contacts">
@@ -49,15 +49,15 @@ const Footer = () => {
 
           <div className="links">
             <h3>LINKS</h3>
-            <Link to="daily-readings">Readings</Link>
-            <Link to="activities">Activities</Link>
+            <Link to="readings">Readings</Link>
+            <Link to="events-activities">Activities</Link>
             <Link to="news">News</Link>
             <Link to="prayers">Morning Prayers</Link>
           </div>
           <div className="links">
             <h3>SERVICE TIME</h3>
-            <Link to="daily-readings">Sunday Mass Service</Link>
-            <Link to="activities">9.00am - 11.00am</Link>
+            <Link to="readings">Sunday Mass Service</Link>
+            <Link to="events-activities">9.00am - 11.00am</Link>
           </div>
         </div>
         <p style={{ textAlign: "center", margin: "20px" }}>

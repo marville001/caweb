@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "./components/Navbar_";
 
 import { Switch, Route } from "react-router-dom"
 import BounceLoader from "react-spinners/BounceLoader"
 import "./styles/main.scss"
 import Loading from "./components/Loading";
-import Footer from "./components/Footer";
+import Admin from "./Admin";
+import Wrapper from "./pages/Wrapper";
 
 
 
@@ -52,23 +52,24 @@ class App extends React.Component {
     return (
       <div>
         <React.Suspense fallback={loading}>
-          <Navbar />
+          {/* <Navbar /> */}
           <Switch>
-            <Route exact path="/" render={props => <Home {...props} />} />
-            <Route exact path="/home" render={props => <Home {...props} />} />
-            <Route exact path="/about" render={props => <About {...props} />} />
-            <Route exact path="/news" render={props => <News {...props} />} />
-            <Route exact path="/events-activities" render={props => <EventsAndActivities {...props} />} />
-            <Route exact path="/leadership" render={props => <Leadership {...props} />} />
-            <Route exact path="/scc" render={props => <Scc {...props} />} />
-            <Route exact path="/gallery" render={props => <Gallery {...props} />} />
-            <Route exact path="/library" render={props => <Library {...props} />} />
-            <Route exact path="/readings" render={props => <Readings {...props} />} />
-            <Route exact path="/prayers" render={props => <Prayers {...props} />} />
-            <Route exact path="/contact" render={props => <Contact {...props} />} />
+            <Route exact path="/" render={props => <Wrapper><Home {...props} /></Wrapper>} />
+            <Route exact path="/home" render={props => <Wrapper><Home {...props} /></Wrapper>} />
+            <Route exact path="/about" render={props => <Wrapper><About {...props} /></Wrapper>} />
+            <Route exact path="/news" render={props => <Wrapper><News {...props} /></Wrapper>} />
+            <Route exact path="/events-activities" render={props => <Wrapper><EventsAndActivities {...props} /></Wrapper>} />
+            <Route exact path="/leadership" render={props => <Wrapper><Leadership {...props} /></Wrapper>} />
+            <Route exact path="/scc" render={props => <Wrapper><Scc {...props} /></Wrapper>} />
+            <Route exact path="/gallery" render={props => <Wrapper><Gallery {...props} /></Wrapper>} />
+            <Route exact path="/library" render={props => <Wrapper><Library {...props} /></Wrapper>} />
+            <Route exact path="/readings" render={props => <Wrapper><Readings {...props} /></Wrapper>} />
+            <Route exact path="/prayers" render={props => <Wrapper><Prayers {...props} /></Wrapper>} />
+            <Route exact path="/contact" render={props => <Wrapper><Contact {...props} /></Wrapper>} />
+            <Route path="/admin" render={props => <Admin {...props} />} />
           </Switch>
           {/* Footer */}
-          <Footer />
+          {/* <Footer /> */}
         </React.Suspense>
       </div>
     );
