@@ -6,13 +6,13 @@ import newsBg from "../images/news-header-bg.jfif";
 // import stJosephImg from "../images/stjoseph.jpg";
 // import stAngelusImg from "../images/stangelus.jpg";
 
-import stJohnImg from "../images/stjohn.jpg";
-import stVitusImg from "../images/stvitus.jpg";
-import stGabrielImg from "../images/stgabriel.jpg";
-import choirImg from "../images/choir.jpg";
-import ladiesImg from "../images/ladies.jpg";
-import gentsImg from "../images/gents.jpg";
-import SccCard from "../components/SccCard";
+// import stJohnImg from "../images/stjohn.jpg";
+// import stVitusImg from "../images/stvitus.jpg";
+// import stGabrielImg from "../images/stgabriel.jpg";
+// import choirImg from "../images/choir.jpg";
+// import ladiesImg from "../images/ladies.jpg";
+// import gentsImg from "../images/gents.jpg";
+// import SccCard from "../components/SccCard";
 
 const Scc = () => {
   return (
