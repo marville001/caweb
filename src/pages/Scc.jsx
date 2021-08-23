@@ -2,17 +2,17 @@ import React from "react";
 import "../styles/scc.scss";
 import PageHeader from "../components/PageHeader";
 import newsBg from "../images/news-header-bg.jfif";
-// import stPetersImg from "../images/stpeters.jpg";
-// import stJosephImg from "../images/stjoseph.jpg";
-// import stAngelusImg from "../images/stangelus.jpg";
+import stPetersImg from "../images/stpeters.jpg";
+import stJosephImg from "../images/stjoseph.jpg";
+import stAngelusImg from "../images/stangelus.jpg";
 
-// import stJohnImg from "../images/stjohn.jpg";
-// import stVitusImg from "../images/stvitus.jpg";
-// import stGabrielImg from "../images/stgabriel.jpg";
-// import choirImg from "../images/choir.jpg";
-// import ladiesImg from "../images/ladies.jpg";
-// import gentsImg from "../images/gents.jpg";
-// import SccCard from "../components/SccCard";
+import stJohnImg from "../images/stjohn.jpg";
+import stVitusImg from "../images/stvitus.jpg";
+import stGabrielImg from "../images/stgabriel.jpg";
+import choirImg from "../images/choir.jpg";
+import ladiesImg from "../images/ladies.jpg";
+import gentsImg from "../images/gents.jpg";
+import SccCard from "../components/SccCard";
 
 const Scc = () => {
   return (
