@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../styles/home.scss";
-import Title from "../components/Title";
+// import Title from "../components/Title";
 import { Button } from "@material-ui/core";
 import HomeCarousel from "../components/HomeCarousel";
 const Home = (props) => {
