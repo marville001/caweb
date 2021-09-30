@@ -20,7 +20,14 @@ const Item = ({item}) => {
         <p>
           <i>{subtitle}</i>
         </p>
-        <Button href={btnlink} className="find-out-btn button">
+        <Button 
+        href={btnlink} 
+        className="find-out-btn button"
+        style={{
+          textAlign:"center",
+          fontSize:"14px"
+        }}
+        >
           {btntext}
         </Button>
       </div>
@@ -54,7 +61,7 @@ const HomeCarousel = (props) => {
 
   return (
     <Carousel 
-    animation="fade"
+    animation="slide"
     indicators={false}
     >
       {items.map((item, i) => (

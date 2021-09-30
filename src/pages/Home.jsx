@@ -80,6 +80,21 @@ const Home = (props) => {
         </div>
       </div>
 
+      <div className="promo">
+        <div className="container promo_container">
+          <div className="promo_card">
+            <h2>Events</h2>
+            <p>Stay up to date with all things CA</p>
+            <button className="button">view events page</button>
+          </div>
+          <div className="promo_card">
+            <h2>Find a Group</h2>
+            <p>Find community where you belong or to join</p>
+            <button className="button">Browse scc groups</button>
+          </div>
+        </div>
+      </div>
+
       {/* Shrine */}
       {/* <div className="shrine">
         <div className="container shrine-content">

@@ -232,10 +232,16 @@
         padding: 10px 20px;
         margin: 5px;
         color: #fff;
-        font-size: 18px;
+        font-size: 16px;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: 1.2px;
         cursor: pointer;
+
+        &:hover{
+          background-color: white;
+          color: var(--primary-color);
+          border: 2px solid var(--primary-color);
+        }
       }
       @include phone{
         h2{
@@ -255,6 +261,53 @@
   }
 }
 
+
+.promo{
+  padding: 50px;
+  text-align: center;
+  .promo_container{
+    display: flex;
+    gap: 20px;
+    @include tablet(){
+      flex-direction: column;
+    }
+    
+    .promo_card{
+      background-color: #fff;
+      padding: 20px 50px;
+      flex: 1;
+
+      h2{
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+      p{
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #4a4a4a;
+      }
+
+      .button{
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        outline: none;
+        padding: 10px 20px;
+        margin: 5px;
+        color: var(--primary-color);
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        cursor: pointer;
+
+        &:hover{
+          color: white;
+          background-color: var(--primary-color);
+          border: 2px solid #fff;
+        }
+      }
+    }
+  }
+}
 .shrine {
   @include phone {
     padding: 0px 20px;
