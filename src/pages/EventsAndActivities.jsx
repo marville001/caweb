@@ -7,7 +7,7 @@ import EventCard from "../components/EventCard";
 
 const EventsAndActivities = () => {
   return (
-    <div className="events">
+    <div className="events-containers">
       <PageHeader
         image={eventsBg}
         title="Events and Activities"

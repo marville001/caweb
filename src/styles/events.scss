@@ -21,9 +21,10 @@
     @content;
   }
 }
-
+// .events{
+//   margin-top: 100px;
+// }
 .events-container {
-  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 10px;

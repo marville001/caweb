@@ -11,6 +11,8 @@ const PageHeader = ({ image, subtitle, title }) => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        zIndex: 1,
+        overflow: "hidden"
         
       }}
       className="page-header"
@@ -35,7 +37,7 @@ const PageHeader = ({ image, subtitle, title }) => {
         </h3>
         <h1
           style={{
-            fontSize: "60px",
+            fontSize: "50px",
             color: "#fff",
             textAlign: "center",
           }}
