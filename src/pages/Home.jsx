@@ -43,6 +43,28 @@ const Home = (props) => {
         </div>
       </div>
 
+      {/* Service */}
+      <div className="services_">
+        <div className="inperson">
+          <h2>In-Person Services</h2>
+          <p>Sundays: 9 AM and 11 AM</p>
+          <button>What to expect</button>
+        </div>
+        <div className="inperson">
+          <h2>Online Services</h2>
+          <p>Sundays: 9 AM</p>
+          <div className="s_btns">
+            <button>FACEbook Live</button>
+            <button>Youtube</button>
+          </div>
+        </div>
+        <div className="inperson">
+          <h2>Browse Our Calendar</h2>
+          <p>learn more about our events</p>
+          <button>BROWSE</button>
+        </div>
+      </div>
+
       <div className="word">
         <h1>Dive into the Word of God</h1>
         <div className="wbtns">
