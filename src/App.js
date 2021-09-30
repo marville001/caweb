@@ -6,6 +6,7 @@ import "./styles/main.scss"
 import Loading from "./components/Loading";
 import Admin from "./Admin";
 import Wrapper from "./pages/Wrapper";
+import Navbar from "./components/Navbar_";
 
 
 
@@ -52,7 +53,6 @@ class App extends React.Component {
     return (
       <div>
         <React.Suspense fallback={loading}>
-          {/* <Navbar /> */}
           <Switch>
             <Route exact path="/" render={props => <Wrapper><Home {...props} /></Wrapper>} />
             <Route exact path="/home" render={props => <Wrapper><Home {...props} /></Wrapper>} />
