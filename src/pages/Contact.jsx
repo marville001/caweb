@@ -4,8 +4,6 @@ import eventsBg from "../images/events-header-bg.jpg";
 
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import TextareaAutosize from '@material-ui/core/TextareaAutosize';
-
 import "../styles/contact.scss";
 
 const Contact = () => {
@@ -32,10 +30,13 @@ const Contact = () => {
             variant="outlined"
             className="input"
           />
-          <TextareaAutosize
-            rowsMin={4}
-            placeholder="Message"
-            className="input textarea"
+          <TextField
+            label="Message"
+            multiline
+            rows={5}
+            type="text"
+            variant="outlined"
+            className="input"
           />
           <Button variant="contained" color="primary">
             Send Message
