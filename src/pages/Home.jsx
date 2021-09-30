@@ -16,11 +16,9 @@ const Home = (props) => {
       <div className="new-mass">
         <div className="container new-mass-content">
           <h1>NEW! MASS TIME</h1>
-          <h2>Weekdays Mass: Wed 1:15 pm, Thur 4:00 pm</h2>
+          <h2>Monday to Saturday at 5pm-6pm</h2>
           <h3>Sunday Mass: 9:00 am - 11:00 am</h3>
-
           <h4>Please wear a mask if you are not vaccinated</h4>
-
           <p>all are welcome!</p>
         </div>
       </div>
@@ -45,23 +43,25 @@ const Home = (props) => {
 
       {/* Service */}
       <div className="services_">
-        <div className="inperson">
-          <h2>In-Person Services</h2>
-          <p>Sundays: 9 AM and 11 AM</p>
-          <button>What to expect</button>
-        </div>
-        <div className="inperson">
-          <h2>Online Services</h2>
-          <p>Sundays: 9 AM</p>
-          <div className="s_btns">
-            <button>FACEbook Live</button>
-            <button>Youtube</button>
+        <div className="container services_container">
+          <div className="inperson">
+            <h2>In-Person Services</h2>
+            <p>Sundays: 9 AM and 11 AM</p>
+            <button className="button">What to expect</button>
           </div>
-        </div>
-        <div className="inperson">
-          <h2>Browse Our Calendar</h2>
-          <p>learn more about our events</p>
-          <button>BROWSE</button>
+          <div className="online">
+            <h2>Online Services</h2>
+            <p>Sundays: 9 AM</p>
+            <div className="s_btns">
+              <button className="button">FACEbook Live</button>
+              <button className="button">Youtube</button>
+            </div>
+          </div>
+          <div className="cal">
+            <h2>Browse Our Calendar</h2>
+            <p>learn more about our events</p>
+            <button className="button">BROWSE</button>
+          </div>
         </div>
       </div>
 
@@ -113,7 +113,7 @@ const Home = (props) => {
       </div> */}
 
       {/* Events */}
-      <div className="events">
+      {/* <div className="events">
         <Title title="Event Calendar" />
         <div className="container events-content">
           <hr />
@@ -152,7 +152,7 @@ const Home = (props) => {
             View Calendar
           </Button>
         </div>
-      </div>
+      </div> */}
 
       {/* Live */}
       <div className="live">

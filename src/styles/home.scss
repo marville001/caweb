@@ -24,7 +24,7 @@
 
 .hero {
   height: 70vh;
-  
+
   .hero-content {
     background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
@@ -78,34 +78,42 @@
   }
 }
 
-.new-mass{
+.new-mass {
   background-color: #fff;
-  .new-mass-content{
+  .new-mass-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 300px;
+    margin: 20px auto;
+    
 
-    h1{
+    h1 {
       margin: 5px 0px;
       font-size: 25px;
+      text-align: center;
     }
-    h2{
+    h2 {
       margin: 5px 0px;
       font-size: 20px;
       color: rgb(54, 46, 46);
+      text-align: center;
     }
-    h3{
+    h3 {
       font-size: 18px;
+      text-align: center;
+      margin: 10px;
     }
-    h4{
+    h4 {
       margin: 10px 0px;
       font-size: 16px;
       color: #353333;
+      text-align: center;
     }
-    p{
+    p {
       font-style: italic;
+      font-size: 16px;
     }
   }
 }
@@ -122,12 +130,12 @@
     font-size: 25px;
     font-family: Mulish sans-serif;
     text-transform: uppercase;
-    @include phone{
+    @include phone {
       text-align: center;
     }
   }
   .wbtns {
-    @include phone{
+    @include phone {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -144,6 +152,7 @@
 }
 
 .welcome {
+  padding: 50px;
   @include phone {
     padding: 0px 20px;
   }
@@ -155,26 +164,94 @@
     justify-content: center;
     align-items: center;
 
-    h1{
+    h1 {
       margin-bottom: 20px;
       text-align: center;
     }
 
-    p{
+    p {
       width: 600px;
       text-align: center;
+      font-size: 16px;
+      letter-spacing: 1.2px;
 
       @include phone {
         width: auto;
       }
     }
 
-    h3{
+    h3 {
       margin-top: 20px;
       font-size: 18px;
       color: #353333;
     }
+  }
+}
 
+.services_ {
+  background-color: var(--primary-color);
+  .services_container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    margin: 30px 0px;
+    padding: 100px;
+    color: #fff;
+    margin: auto;
+
+    @include tablet{
+      flex-direction: column;
+    }
+
+    .inperson, .online, .cal{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2{
+        margin-bottom: 15px;
+        font-size: 30px;
+      }
+      p{
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #dadada;
+      }
+      .s_btns{
+        display: flex;
+        @include phone{
+          flex-direction: column;
+        }
+      }
+
+      .button{
+        background-color: transparent;
+        border: 2px solid #fff;
+        outline: none;
+        padding: 10px 20px;
+        margin: 5px;
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+      }
+      @include phone{
+        h2{
+          font-size: 20px;
+          text-align: center;
+        }
+        p{
+          font-size: 16px;
+          text-align: center;
+        }
+        .button{
+          font-size: 14px;
+          width: 200px;
+        }
+      }
+    }
   }
 }
 
@@ -236,54 +313,54 @@
   }
 }
 
-.events {
-  padding: 0px;
-  margin-top: -30px;
-  @include phone {
-    padding: 0px 20px;
-  }
+// .events {
+//   padding: 0px;
+//   margin-top: -30px;
+//   @include phone {
+//     padding: 0px 20px;
+//   }
 
-  .events-content {
-    align-self: flex-start;
-    .event {
-      display: flex;
-      .event-date {
-        display: flex;
-        flex-direction: column;
-        h2 {
-          margin: 20px 20px 0px 20px;
-          font-size: 24px;
-          @include phone {
-            font-size: 20px;
-          }
-        }
-        h3 {
-          margin: 5px 20px 20px 20px;
-          font-size: 20px;
-          font-weight: 200;
-          @include phone {
-            font-size: 16px;
-          }
-        }
-      }
-      p {
-        margin: 20px;
-        font-size: 18px;
-        font-weight: 300;
-        @include phone {
-          font-size: 14px;
-        }
-      }
-    }
-    .more-events-btn {
-      margin: 20px 0px;
-      border-radius: 0px;
-      font-size: 16px;
-      width: 200px;
-      color: #fff;
-    }
-  }
-}
+//   .events-content {
+//     align-self: flex-start;
+//     .event {
+//       display: flex;
+//       .event-date {
+//         display: flex;
+//         flex-direction: column;
+//         h2 {
+//           margin: 20px 20px 0px 20px;
+//           font-size: 24px;
+//           @include phone {
+//             font-size: 20px;
+//           }
+//         }
+//         h3 {
+//           margin: 5px 20px 20px 20px;
+//           font-size: 20px;
+//           font-weight: 200;
+//           @include phone {
+//             font-size: 16px;
+//           }
+//         }
+//       }
+//       p {
+//         margin: 20px;
+//         font-size: 18px;
+//         font-weight: 300;
+//         @include phone {
+//           font-size: 14px;
+//         }
+//       }
+//     }
+//     .more-events-btn {
+//       margin: 20px 0px;
+//       border-radius: 0px;
+//       font-size: 16px;
+//       width: 200px;
+//       color: #fff;
+//     }
+//   }
+// }
 
 .live {
   @include phone {
@@ -306,7 +383,7 @@
       width: 400px;
       text-align: center;
       margin: 20px;
-      @include phone{
+      @include phone {
         font-size: 22px;
         width: 80%;
       }
@@ -330,8 +407,7 @@
   }
 }
 
-
-.youtube-video{
+.youtube-video {
   height: 440px;
   padding: 20px 0px;
   display: flex;
@@ -341,7 +417,7 @@
     padding: 20px 20px;
   }
 
-  iframe{
+  iframe {
     height: 400px;
     width: 600px;
     margin: 0px auto;
