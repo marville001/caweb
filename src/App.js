@@ -6,9 +6,6 @@ import "./styles/main.scss"
 import Loading from "./components/Loading";
 import Admin from "./Admin";
 import Wrapper from "./pages/Wrapper";
-import Navbar from "./components/Navbar_";
-
-
 
 // Pages
 const Home = React.lazy(() => import("./pages/Home"))
