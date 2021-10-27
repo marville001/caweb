@@ -30,6 +30,7 @@ const Navbar = () => {
           <Link onClick={() => setNavOpen(false)} className="nav_item" to="/events-activities">
             Events
           </Link>
+            <Link onClick={() => setNavOpen(false)} className="nav_item" to="/leadership">Leadership</Link>
           <Link onClick={() => setNavOpen(false)} className="nav_item" to="/news">
             News
           </Link>         
@@ -45,14 +46,12 @@ const Navbar = () => {
           <Link onClick={() => setNavOpen(false)} className="nav_item nav_item_menu" to="/library">Library</Link>
           <Link onClick={() => setNavOpen(false)} className="nav_item nav_item_menu" to="/contact">Contact</Link>
             <Link onClick={() => setNavOpen(false)} className="nav_item nav_item_menu" to="/about">About</Link>
-            <Link onClick={() => setNavOpen(false)} className="nav_item nav_item_menu" to="/leadership">Leadership</Link>
             <Link onClick={() => setNavOpen(false)} className="nav_item nav_item_menu" to="/readings">Readings</Link>
           <p className="nav_item menu">
               <span>More+</span>
           <div className="menu-items">
             <Link onClick={() => setNavOpen(false)} className="nav_item" to="/contact">Contact</Link>
             <Link onClick={() => setNavOpen(false)} className="nav_item" to="/about">About</Link>
-            <Link onClick={() => setNavOpen(false)} className="nav_item" to="/leadership">Leadership</Link>
             <Link onClick={() => setNavOpen(false)} className="nav_item" to="/readings">Readings</Link>
           </div>
           </p>
