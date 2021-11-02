@@ -1,6 +1,6 @@
-import { Button, TextField } from "@material-ui/core";
+import { Button, TextField } from "@mui/material";
 import React from "react";
-import "../styles/login.scss";
+import "./login.scss";
 
 const Login = () => {
   return (
@@ -19,7 +19,7 @@ const Login = () => {
           variant="outlined"
           className="input"
         />
-        <Button variant="contained" color="primary">
+        <Button className="login-btn" variant="contained" color="primary">
           Login
         </Button>
       </div>
