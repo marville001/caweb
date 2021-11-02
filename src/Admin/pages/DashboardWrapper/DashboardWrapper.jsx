@@ -40,7 +40,6 @@ const DashContainer = styled(Box)((theme) => ({
 const DashMain = styled("main")((theme) => ({
   background: "#fff",
   minHeight: "100vh",
-  padding: "0px 20px",
   flex: 1,
 }));
 

@@ -6,12 +6,19 @@ const SidebarContainer = styled(Box)(({ theme, open }) => ({
   background: "#fff",
   width: open ? "280px" : "0px",
   borderRight: "1px solid #f5f5f1",
-  padding: open?"20px":"0px",
-  transition:"all .3s linear",
+  padding: open ? "20px" : "0px",
+  transition: "all .3s linear",
   [theme.breakpoints.down("md")]: {
     transform: open ? "translateX(0)" : "translateX(-100%)",
     opacity: open ? 1 : 0,
     zIndex: open ? 100 : -1,
+  },
+  [theme.breakpoints.up("md")]: {
+    transform: "translateX(0)",
+    opacity: 1,
+    zIndex: 100,
+    width: "280px",
+    padding: "20px",
   },
 }));
 
