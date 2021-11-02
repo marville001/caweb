@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 // components
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import Loading from "../../components/Loading/Loading";
+import ChaseLoading from "../../components/Loading/ChaseLoading";
 import { Box, styled } from "@mui/material";
 
 // Pages
@@ -26,7 +26,7 @@ const DashboardWrapper = () => {
       <Sidebar open={sidebarOpen} />
       <DashMain>
         <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-        <React.Suspense fallback={<Loading />}>
+        <React.Suspense fallback={<ChaseLoading />}>
           <Switch>
             <Route
               exact

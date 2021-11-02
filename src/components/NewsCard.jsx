@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 
 const NewsCard = ({ content, openNews }) => {
   const { title, news, id } = content;

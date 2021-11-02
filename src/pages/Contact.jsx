@@ -2,8 +2,7 @@ import React from "react";
 import PageHeader from "../components/PageHeader";
 import eventsBg from "../images/events-header-bg.jpg";
 
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import {Button,TextField} from '@mui/material';
 import "../styles/contact.scss";
 
 const Contact = () => {

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import {  IconButton } from "@material-ui/core";
+import {  IconButton } from "@mui/material";
 
-import MenuIcon from "@material-ui/icons/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
 
-import ClearIcon from "@material-ui/icons/Clear";
+import ClearIcon from "@mui/icons-material/Clear";
 import "../styles/navbar_.scss";
 import { Link } from "react-router-dom";
 

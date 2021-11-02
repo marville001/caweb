@@ -1,5 +1,5 @@
 import React from "react";
-import { CloseOutlined } from "@material-ui/icons";
+import { CloseOutlined } from "@mui/icons-material";
 
 const ReadNewsModal = ({ open, news, closeNews }) => {
   const newsClick = (e) => {

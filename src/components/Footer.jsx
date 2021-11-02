@@ -2,11 +2,11 @@ import React from "react";
 import "../styles/footer.scss";
 import { Link } from "react-router-dom";
 
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import YouTubeIcon from "@material-ui/icons/YouTube";
-import { Button } from "@material-ui/core";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import { Button } from "@mui/material";
 
 const Footer = () => {
   return (
