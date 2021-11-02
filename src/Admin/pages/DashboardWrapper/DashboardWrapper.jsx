@@ -11,6 +11,13 @@ import { Box, styled } from "@mui/material";
 const HomeDashboard = React.lazy(() =>
   import("../HomeDashboard/HomeDashboard")
 );
+const ViewUsers = React.lazy(() => import("../ViewUsers/ViewUsers"));
+const ViewEvents = React.lazy(() => import("../ViewEvents/ViewEvents"));
+const Analytics = React.lazy(() => import("../Analytics/Analytics"));
+const Notifications = React.lazy(() =>
+  import("../Notifications/Notifications")
+);
+const Messages = React.lazy(() => import("../Messages/Messages"));
 
 const DashboardWrapper = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -22,8 +29,30 @@ const DashboardWrapper = () => {
         <React.Suspense fallback={<Loading />}>
           <Switch>
             <Route
+              exact
               path="/admin/"
               render={(props) => <HomeDashboard {...props} />}
+            />
+            <Route
+              path="/admin/users"
+              render={(props) => <ViewUsers {...props} />}
+            />
+            <Route
+              path="/admin/events"
+              render={(props) => <ViewEvents {...props} />}
+            />
+            <Route
+              path="/admin/analytics"
+              render={(props) => <Analytics {...props} />}
+            />
+            <Route
+              exact
+              path="/admin/notifications"
+              render={(props) => <Notifications {...props} />}
+            />
+            <Route
+              path="/admin/messages"
+              render={(props) => <Messages {...props} />}
             />
           </Switch>
         </React.Suspense>

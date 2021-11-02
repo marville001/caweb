@@ -1,14 +1,25 @@
 import { IconButton, styled } from "@mui/material";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
 const SidebarMenuItem = ({ title, items, icon: Icon }) => {
+  const history = useHistory();
+  const { pathname } = history.location;
+
+  const isActive = (path) => {
+    return path === pathname;
+  };
+
   return (
     <div>
       <ListTitle>{title}</ListTitle>
       <ListContainer>
         {items?.map(({ to, icon, label }, i) => (
-          <ListItem key={i} activeClassName="nav-active" to={to}>
+          <ListItem
+            key={i}
+            className={isActive(to) ? "nav-active" : ""}
+            to={to}
+          >
             <ListIcon>{icon}</ListIcon>
             {label}
           </ListItem>
@@ -22,12 +33,12 @@ const ListContainer = styled("div")(({ theme }) => ({
   // background:"yellow"
   margin: "0px",
 
-  '.nav-active':{
+  ".nav-active": {
     color: theme.palette.primary.main,
     background: theme.palette.primary.light,
     borderRight: "5px solid",
     borderRightColor: theme.palette.primary.main,
-  }
+  },
 }));
 
 const ListTitle = styled("h4")(({ theme }) => ({
@@ -50,9 +61,9 @@ const ListItem = styled(NavLink)(({ theme }) => ({
     background: theme.palette.primary.light,
     borderRight: "5px solid",
     borderRightColor: theme.palette.primary.main,
-    '.MuiIconButton-root':{
-        color: theme.palette.primary.main,
-    }
+    ".MuiIconButton-root": {
+      color: theme.palette.primary.main,
+    },
   },
   "&:active": {
     color: theme.palette.primary.main,
