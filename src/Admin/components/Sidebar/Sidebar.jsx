@@ -10,9 +10,9 @@ const dashitems = [
 ];
 
 const genitems = [
-  { to: "/admin/", label: "Analytics", icon: <Analytics /> },
-  { to: "/admin/users", label: "Notifications", icon: <Notifications /> },
-  { to: "/admin/events", label: "Messages", icon: <Message /> },
+  { to: "/admin/analytics", label: "Analytics", icon: <Analytics /> },
+  { to: "/admin/notifications", label: "Notifications", icon: <Notifications /> },
+  { to: "/admin/messages", label: "Messages", icon: <Message /> },
 ];
 
 const Sidebar = ({ open }) => {

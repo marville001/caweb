@@ -14,6 +14,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import PersonIcon from "@mui/icons-material/Person";
+import SettingsIcon from "@mui/icons-material/Settings";
+import { Button } from "@mui/material";
 
 const MenuItemCustom = styled(MenuItem)((theme) => ({
   fontSize: "16px",
@@ -38,7 +41,7 @@ export default function Navbar({ sidebarOpen, setSidebarOpen }) {
     <Menu
       anchorEl={anchorEl}
       anchorOrigin={{
-        vertical: "top",
+        vertical: "bottom",
         horizontal: "right",
       }}
       id={menuId}
@@ -47,13 +50,27 @@ export default function Navbar({ sidebarOpen, setSidebarOpen }) {
         vertical: "top",
         horizontal: "right",
       }}
+      style={{
+        width: "200px",
+      }}
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItemCustom onClick={handleMenuClose}>Profile</MenuItemCustom>
-      <MenuItemCustom onClick={handleMenuClose}>Settings</MenuItemCustom>
-      <MenuItemCustom onClick={handleMenuClose}>My account</MenuItemCustom>
-      <MenuItemCustom onClick={handleMenuClose}>Logout</MenuItemCustom>
+      <MenuItemCustom onClick={handleMenuClose}>
+        <IconButton>
+          <PersonIcon />
+        </IconButton>
+        Profile
+      </MenuItemCustom>
+      <MenuItemCustom onClick={handleMenuClose}>
+        <IconButton>
+          <SettingsIcon />
+        </IconButton>
+        Settings
+      </MenuItemCustom>
+      <div style={{ display: "flex", justifyContent: "center", padding:"10px" }}>
+        <Button style={{flex: 1}} variant="contained">Logout</Button>
+      </div>
     </Menu>
   );
   return (

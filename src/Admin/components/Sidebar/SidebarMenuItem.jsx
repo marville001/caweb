@@ -21,6 +21,13 @@ const SidebarMenuItem = ({ title, items, icon: Icon }) => {
 const ListContainer = styled("div")(({ theme }) => ({
   // background:"yellow"
   margin: "0px",
+
+  '.nav-active':{
+    color: theme.palette.primary.main,
+    background: theme.palette.primary.light,
+    borderRight: "5px solid",
+    borderRightColor: theme.palette.primary.main,
+  }
 }));
 
 const ListTitle = styled("h4")(({ theme }) => ({
