@@ -1,11 +1,15 @@
-import React from 'react'
+import { Button } from "@mui/material";
+import React from "react";
 
-const Navbar = () => {
-    return (
-        <div>
-            <h4>Navbar</h4>
-        </div>
-    )
-}
+const Navbar = ({ sidebarOpen, setSidebarOpen }) => {
+  return (
+    <div>
+      <h4>Navbar</h4>
+      <Button variant="contained" onClick={() => setSidebarOpen(!sidebarOpen)}>
+        Toggle
+      </Button>
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -1,5 +1,5 @@
-import React from "react";
-import {  Switch } from "react-router-dom";
+import React, { useState } from "react";
+import { Switch, Route } from "react-router-dom";
 
 // components
 import Navbar from "../../components/Navbar/Navbar";
@@ -8,25 +8,40 @@ import Loading from "../../components/Loading/Loading";
 import { Box, styled } from "@mui/material";
 
 // Pages
-// const Login = React.lazy(() => import("./pages/Login/Login"));
-
-const DashContainer = styled(Box)((theme)=>({
-    background:"whitesmoke",
-    minHeight: "100vh"
-}))
+const HomeDashboard = React.lazy(() =>
+  import("../HomeDashboard/HomeDashboard")
+);
 
 const DashboardWrapper = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   return (
     <DashContainer>
-      <Navbar />
-      <Sidebar />
-      <React.Suspense fallback={<Loading />}>
-        <Switch>
-          {/* <Route exact path="/admin/login" render={(props) => <Login {...props} />} />
-        <Route path="/admin/" render={(props) => <DashboardWrapper {...props} />} /> */}
-        </Switch>
-      </React.Suspense>
+      <Sidebar open={sidebarOpen} />
+      <DashMain>
+        <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        <React.Suspense fallback={<Loading />}>
+          <Switch>
+            <Route
+              path="/admin/"
+              render={(props) => <HomeDashboard {...props} />}
+            />
+          </Switch>
+        </React.Suspense>
+      </DashMain>
     </DashContainer>
   );
 };
+
+const DashContainer = styled(Box)((theme) => ({
+  background: "whitesmoke",
+  minHeight: "100vh",
+  display: "flex",
+}));
+const DashMain = styled("main")((theme) => ({
+  background: "#fff",
+  minHeight: "100vh",
+  padding: "0px 20px",
+  flex: 1,
+}));
+
 export default DashboardWrapper;
