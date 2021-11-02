@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
-import Loading from "./components/Loading/Loading";
+import ChaseLoading from "./components/Loading/ChaseLoading";
 
 import theme from './theme'
 // Pages
@@ -15,7 +15,7 @@ const DashboardWrapper = React.lazy(() =>
 const Admin = () => {
   return (
     <ThemeProvider theme={theme}>
-      <React.Suspense fallback={<Loading />}>
+      <React.Suspense fallback={<ChaseLoading />}>
         <Switch>
           <Route
             exact
