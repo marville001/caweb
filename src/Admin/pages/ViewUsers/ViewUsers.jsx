@@ -1,10 +1,11 @@
 import React from 'react'
+import {MainContainer} from '../../components/custom/StyledComponents'
 
 const ViewUsers = () => {
     return (
-        <div>
+        <MainContainer>
             <h4>All Users</h4>
-        </div>
+        </MainContainer>
     )
 }
 
