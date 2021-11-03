@@ -1,12 +1,13 @@
-import React from 'react'
-import {MainContainer} from '../../components/custom/StyledComponents'
+import React from "react";
+import PageHeaderWithBreadCamp from "../../components/custom/PageHeaderWithBreadCamp";
+import { MainContainer } from "../../components/custom/StyledComponents";
 
 const ViewUsers = () => {
-    return (
-        <MainContainer>
-            <h4>All Users</h4>
-        </MainContainer>
-    )
-}
+  return (
+    <MainContainer>
+      <PageHeaderWithBreadCamp title="All Users" />
+    </MainContainer>
+  );
+};
 
-export default ViewUsers
+export default ViewUsers;
