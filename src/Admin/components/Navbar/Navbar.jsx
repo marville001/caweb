@@ -21,6 +21,7 @@ import { Button } from "@mui/material";
 const MenuItemCustom = styled(MenuItem)((theme) => ({
   fontSize: "16px",
   padding: "5px 20px",
+  paddingRight:"40px"
 }));
 
 export default function Navbar({ sidebarOpen, setSidebarOpen }) {

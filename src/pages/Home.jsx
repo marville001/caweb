@@ -3,14 +3,14 @@ import React from "react";
 import "../styles/home.scss";
 // import Title from "../components/Title";
 import { Button } from "@mui/material";
-import HomeCarousel from "../components/HomeCarousel";
+// import HomeCarousel from "../components/HomeCarousel";
 const Home = (props) => {
   console.log(props);
   return (
     <div className="home">
       {/* Hero Section */}
       <div className="hero">
-        <HomeCarousel />
+        {/* <HomeCarousel /> */}
       </div>
 
       <div className="new-mass">
