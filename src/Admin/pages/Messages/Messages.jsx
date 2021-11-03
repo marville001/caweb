@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { MainContainer } from "../../components/custom/StyledComponents";
 
 const Messages = () => {
-    return (
-        <div>
-            <h4>Messages</h4>
-        </div>
-    )
-}
+  return (
+    <MainContainer>
+      <h1>Coming soon...</h1>
+    </MainContainer>
+  );
+};
 
-export default Messages
+export default Messages;

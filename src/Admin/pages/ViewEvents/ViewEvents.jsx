@@ -1,10 +1,11 @@
 import React from 'react'
+import { MainContainer } from '../../components/custom/StyledComponents'
 
 const ViewEvents = () => {
     return (
-        <div>
-            <h4>All Events</h4>
-        </div>
+        <MainContainer>
+            <h1>Coming soon...</h1>
+        </MainContainer>
     )
 }
 
