@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import PageHeaderWithBreadCamp from "../../components/custom/PageHeaderWithBreadCamp";
+import { MainContainer } from "../../components/custom/StyledComponents";
 
 const HomeDashboard = () => {
-    return (
-        <div>
-            <h4>Home</h4>
-        </div>
-    )
-}
+  return (
+    <MainContainer>
+      <PageHeaderWithBreadCamp
+        title="Dashboard"
+      />
+    </MainContainer>
+  );
+};
 
-export default HomeDashboard
+export default HomeDashboard;
