@@ -12,7 +12,7 @@ const HomeDashboard = () => {
   ];
   return (
     <MainContainer>
-      <PageHeaderWithBreadCamp title="Dashboard" crumbs={crumbs} />
+      <PageHeaderWithBreadCamp noaction title="Dashboard" crumbs={crumbs} />
     </MainContainer>
   );
 };
