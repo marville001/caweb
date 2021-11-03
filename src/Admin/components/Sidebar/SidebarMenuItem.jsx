@@ -48,7 +48,6 @@ const ListTitle = styled("h4")(({ theme }) => ({
 }));
 
 const ListItem = styled(NavLink)(({ theme }) => ({
-  display: "block",
   padding: "12px",
   paddingLeft: "40px",
   fontSize: "18px",
