@@ -29,7 +29,7 @@ const loading = (
     alignItems: "center",
     flexDirection: "column-reverse"
   }}>
-    <BounceLoader color="crimson" loading={true} size={20} />
+    <BounceLoader color="crimson" loading={true} size={40} />
   </div>
 )
 
