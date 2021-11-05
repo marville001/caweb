@@ -4,6 +4,8 @@ import "../styles/home.scss";
 // import Title from "../components/Title";
 import { Button } from "@mui/material";
 // import HomeCarousel from "../components/HomeCarousel";
+
+
 const Home = (props) => {
   console.log(props);
   return (

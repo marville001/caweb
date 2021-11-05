@@ -19,6 +19,7 @@ const Prayers = React.lazy(() => import("./pages/Prayers"))
 const Readings = React.lazy(() => import("./pages/Readings"))
 const Scc = React.lazy(() => import("./pages/Scc"))
 const News = React.lazy(() => import("./pages/News"))
+const Login = React.lazy(() => import("./pages/Login"))
 
 
 const loading = (
@@ -53,6 +54,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" render={props => <Wrapper><Home {...props} /></Wrapper>} />
             <Route exact path="/home" render={props => <Wrapper><Home {...props} /></Wrapper>} />
+            <Route exact path="/login" render={props => <Wrapper><Login {...props} /></Wrapper>} />
             <Route exact path="/about" render={props => <Wrapper><About {...props} /></Wrapper>} />
             <Route exact path="/news" render={props => <Wrapper><News {...props} /></Wrapper>} />
             <Route exact path="/events-activities" render={props => <Wrapper><EventsAndActivities {...props} /></Wrapper>} />
