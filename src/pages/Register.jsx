@@ -1,7 +1,11 @@
 import {
   Button,
   FormControl,
+  FormControlLabel,
+  FormLabel,
   MenuItem,
+  Radio,
+  RadioGroup,
   Select,
   TextField,
 } from "@mui/material";
@@ -34,7 +38,7 @@ const Login = () => {
       <div className="login-form">
         <h1 className="form-title">Register Here</h1>
         <div className="input-group">
-          <label className="input-label">Full Name</label>
+          <FormLabel className="input-label">Full Name</FormLabel>
           <TextField
             name="name"
             value={user.name}
@@ -46,7 +50,7 @@ const Login = () => {
         </div>
 
         <div className="input-group">
-          <label className="input-label">Email</label>
+          <FormLabel className="input-label">Email</FormLabel>
           <TextField
             name="email"
             value={user.email}
@@ -57,7 +61,7 @@ const Login = () => {
           />
         </div>
         <FormControl fullWidth>
-          <label className="input-label">School</label>
+          <FormLabel className="input-label">School</FormLabel>
           <Select
             value={user.school}
             name="school"
@@ -69,7 +73,7 @@ const Login = () => {
           </Select>
         </FormControl>
         <div className="input-group">
-          <label className="input-label">Phone Number</label>
+          <FormLabel className="input-label">Phone Number</FormLabel>
           <TextField
             name="contact"
             value={user.contact}
@@ -80,7 +84,7 @@ const Login = () => {
           />
         </div>
         <div className="input-group">
-          <label className="input-label">Password</label>
+          <FormLabel className="input-label">Password</FormLabel>
           <TextField
             name="password"
             value={user.password}
@@ -90,13 +94,37 @@ const Login = () => {
             fullWidth
           />
         </div>
+
+        <FormControl component="fieldset">
+          <FormLabel className="input-label" component="legend">
+            Gender
+          </FormLabel>
+          <RadioGroup
+            row
+            aria-label="gender"
+            defaultValue="female"
+            value={user.gender}
+            name="radio-buttons-group"
+          >
+            <FormControlLabel
+              value="female"
+              control={<Radio />}
+              label="Female"
+            />
+            <FormControlLabel value="male" control={<Radio />} label="Male" />
+          </RadioGroup>
+        </FormControl>
+        <div style={{margin:"10px"}} />
+
         <Button fullWidth variant="contained">
           Register
         </Button>
 
         <h5 className="or">Already have an account?</h5>
 
-        <Button fullWidth onClick={()=>history.push("/login")}>Login Here</Button>
+        <Button fullWidth onClick={() => history.push("/login")}>
+          Login Here
+        </Button>
       </div>
     </div>
   );
