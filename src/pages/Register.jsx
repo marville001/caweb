@@ -18,7 +18,7 @@ const Login = () => {
   return (
     <div className="login-container container">
       <div className="login-form">
-        <h1 className="form-title">Login Here</h1>
+        <h1 className="form-title">Register Here</h1>
         <div className="input-group">
           <label className="input-label">Email</label>
           <TextField
@@ -43,13 +43,13 @@ const Login = () => {
           />
         </div>
         <Button fullWidth variant="contained">
-          Login
+          Register
         </Button>
 
-        <h5 className="or">Not yet registered?</h5>
+        <h5 className="or">Already have an account?</h5>
 
         <Button fullWidth>
-          Register Here
+          Login Here
         </Button>
       </div>
     </div>
