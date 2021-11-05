@@ -6,7 +6,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 import ClearIcon from "@mui/icons-material/Clear";
 import "../styles/navbar_.scss";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -14,6 +14,8 @@ const Navbar = () => {
   const toggleNavbar = () => {
     setNavOpen(!navOpen);
   };
+
+  const history = useHistory();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -57,7 +59,7 @@ const Navbar = () => {
           </p>
         </div>
         <div className="nav_right">
-          <button className="login_btn">Login</button>
+          <button onClick={()=>history.push("/login")} style={{marginRight:"5px"}} className="login_btn">Login or Register</button>
           <IconButton
             onClick={toggleNavbar}
             edge="start"
