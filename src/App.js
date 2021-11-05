@@ -20,6 +20,7 @@ const Readings = React.lazy(() => import("./pages/Readings"))
 const Scc = React.lazy(() => import("./pages/Scc"))
 const News = React.lazy(() => import("./pages/News"))
 const Login = React.lazy(() => import("./pages/Login"))
+const Register = React.lazy(() => import("./pages/Register"))
 
 
 const loading = (
@@ -55,6 +56,7 @@ class App extends React.Component {
             <Route exact path="/" render={props => <Wrapper><Home {...props} /></Wrapper>} />
             <Route exact path="/home" render={props => <Wrapper><Home {...props} /></Wrapper>} />
             <Route exact path="/login" render={props => <Wrapper><Login {...props} /></Wrapper>} />
+            <Route exact path="/register" render={props => <Wrapper><Register {...props} /></Wrapper>} />
             <Route exact path="/about" render={props => <Wrapper><About {...props} /></Wrapper>} />
             <Route exact path="/news" render={props => <Wrapper><News {...props} /></Wrapper>} />
             <Route exact path="/events-activities" render={props => <Wrapper><EventsAndActivities {...props} /></Wrapper>} />
