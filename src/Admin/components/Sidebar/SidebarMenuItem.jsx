@@ -38,6 +38,9 @@ const ListContainer = styled("div")(({ theme }) => ({
     background: theme.palette.primary.light,
     borderRight: "5px solid",
     borderRightColor: theme.palette.primary.main,
+    ".MuiIconButton-root": {
+      color: theme.palette.primary.main,
+    },
   },
 }));
 
@@ -55,11 +58,10 @@ const ListItem = styled(NavLink)(({ theme }) => ({
   margin: "0px",
   display: "flex",
   alignItems: "center",
+  transition:"all .3s ease",
   "&:hover": {
     color: theme.palette.primary.main,
-    background: theme.palette.primary.light,
-    borderRight: "5px solid",
-    borderRightColor: theme.palette.primary.main,
+    background: "#f5f5f5",
     ".MuiIconButton-root": {
       color: theme.palette.primary.main,
     },
