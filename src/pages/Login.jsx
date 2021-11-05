@@ -2,12 +2,15 @@ import { Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 
 import "../styles/login-register.scss";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
+
+  const history = useHistory();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -48,7 +51,7 @@ const Login = () => {
 
         <h5 className="or">Not yet registered?</h5>
 
-        <Button fullWidth>
+        <Button fullWidth onClick={()=>history.push("/register")}>
           Register Here
         </Button>
       </div>

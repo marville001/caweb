@@ -10,6 +10,8 @@ import React, { useState } from "react";
 
 import "../styles/login-register.scss";
 
+import { useHistory } from "react-router-dom";
+
 const Login = () => {
   const [user, setUser] = useState({
     name: "",
@@ -19,6 +21,8 @@ const Login = () => {
     email: "",
     password: "",
   });
+
+  const history = useHistory();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -93,7 +97,7 @@ const Login = () => {
 
         <h5 className="or">Already have an account?</h5>
 
-        <Button fullWidth>Login Here</Button>
+        <Button fullWidth onClick={()=>history.push("/login")}>Login Here</Button>
       </div>
     </div>
   );
