@@ -26,7 +26,7 @@ const Navbar = () => {
     <div className="appBar">
       <div className="container navbar">
         <Link onClick={() => setNavOpen(false)} to="/home" className="logo">
-          DKUT CC
+          DEKUT CC
         </Link>
         <div className={navOpen ? "nav_left open" : "nav_left"}>
           <Link onClick={() => setNavOpen(false)} className="nav_item" to="/events-activities">
