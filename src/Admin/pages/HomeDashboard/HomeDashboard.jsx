@@ -1,12 +1,14 @@
-import { Button, Grid, Paper } from "@mui/material";
+import { Button, Grid, Paper, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { MainContainer } from "../../components/custom/StyledComponents";
 import { BarChart, Group } from "@mui/icons-material";
 
-const HomeDashboard = () => {
+import { Users, Activity } from "react-feather";
+import UsersDoughnut from "../../components/homedashboard/UsersDoughnut";
 
+const HomeDashboard = () => {
   return (
     <MainContainer>
       <Grid container spacing={2}>
@@ -24,25 +26,27 @@ const HomeDashboard = () => {
           <RightTopCard>
             <h1>Quick Action</h1>
             <ul>
-              <li>
-                <NavLink to="/admin">View Users</NavLink>
+              {[1,2,3,4].map(n=>(
+                <li key={n}>
+                <NavLink
+                  style={{ 
+                    display: "flex", 
+                    alignItems: "center" 
+                  }}
+                  to="/admin"
+                >
+                  {n===2?<> <Activity size={16} style={{marginRight:"5px"}} /> View Events </> :
+                  <><Users size={16} style={{marginRight:"5px"}} /> View Users </>}
+                </NavLink>
               </li>
-              <li>
-                <NavLink to="/admin">View Users</NavLink>
-              </li>
-              <li>
-                <NavLink to="/admin">View Users</NavLink>
-              </li>
-              <li>
-                <NavLink to="/admin">View Users</NavLink>
-              </li>
+              ))}
             </ul>
           </RightTopCard>
         </Grid>
       </Grid>
       <div style={{ margin: "30px 0px" }} />
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={12} md={4}>
           <DashCard>
             <h3>Total Users</h3>
             <div className="count-card">
@@ -51,28 +55,48 @@ const HomeDashboard = () => {
                 <h2>24,556</h2>
               </div>
               <div className="right-part">
-                <BarChart style={{fontSize:"60px"}} />
+                <BarChart style={{ fontSize: "60px", color:"#50ac56" }} />
               </div>
             </div>
           </DashCard>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={12} md={4}>
           <DashCard>
             <h3>Total Events</h3>
+            <div className="count-card">
+              <div className="left-part">
+                <Group />
+                <h2>24,556</h2>
+              </div>
+              <div className="right-part">
+                <BarChart style={{ fontSize: "60px", color:"#50ac56" }} />
+              </div>
+            </div>
           </DashCard>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={12} md={4}>
           <DashCard>
             <h3>Total XYZ</h3>
+            <div className="count-card">
+              <div className="left-part">
+                <Group />
+                <h2>24,556</h2>
+              </div>
+              <div className="right-part">
+                <BarChart style={{ fontSize: "60px", color:"#50ac56" }} />
+              </div>
+            </div>
           </DashCard>
         </Grid>
       </Grid>
       <div style={{ margin: "30px 0px" }} />
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
-          <GraphCard>Graph One</GraphCard>
+        <Grid item xs={12} md={6}>
+          <GraphCard>
+            <UsersDoughnut />
+          </GraphCard>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} md={6}>
           <GraphCard>Graph Two</GraphCard>
         </Grid>
       </Grid>
@@ -123,14 +147,15 @@ const DashCard = styled(Paper)(({ theme }) => ({
   padding: "20px",
   minHeight: "120px",
   ".count-card": {
+    marginTop:"15px",
     display: "flex",
     justifyContent: "space-between",
-    paddingRight:"30px"
+    paddingRight: "30px",
   },
 }));
 
-const GraphCard = styled(Paper)(({ theme }) => ({
-  padding: "20px",
+const GraphCard = styled(Box)(({ theme }) => ({
+  // padding: "20px",
   minHeight: "200px",
 }));
 
