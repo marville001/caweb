@@ -3,6 +3,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import PageHeaderWithBreadCamp from "../../components/custom/PageHeaderWithBreadCamp";
 import { MainContainer } from "../../components/custom/StyledComponents";
+import UserListingTable from "../../components/users/UserListingTable";
+import UserListingToolBar from "../../components/users/UserListingToolBar";
+import customers from '../../__mocks__/customers';
 
 const ViewUsers = () => {
   const crumbs = [
@@ -16,6 +19,10 @@ const ViewUsers = () => {
   return (
     <MainContainer>
       <PageHeaderWithBreadCamp title="All Users" crumbs={crumbs} />
+      
+      <UserListingToolBar />
+      <br />
+      <UserListingTable customers={customers} />
     </MainContainer>
   );
 };
