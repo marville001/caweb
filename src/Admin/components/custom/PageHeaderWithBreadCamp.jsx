@@ -3,7 +3,7 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import { styled } from "@mui/material/styles";
 import { Button } from "@mui/material";
 
-const PageHeaderWithBreadCamp = ({ title, crumbs, noaction }) => {
+const PageHeaderWithBreadCamp = ({ action, title, crumbs, noaction }) => {
   return (
     <CompContainer>
       <div>
@@ -14,16 +14,20 @@ const PageHeaderWithBreadCamp = ({ title, crumbs, noaction }) => {
       </div>
       {!noaction && (
         <div>
-          <Button
-            style={{
-              marginRight: "20px",
-              fontSize: "14px",
-              padding: "5px 25px",
-            }}
-            variant="contained"
-          >
-            Add User
-          </Button>
+          {action ? (
+            action()
+          ) : (
+            <Button
+              style={{
+                marginRight: "20px",
+                fontSize: "14px",
+                padding: "5px 25px",
+              }}
+              variant="contained"
+            >
+              Add User
+            </Button>
+          )}
         </div>
       )}
     </CompContainer>

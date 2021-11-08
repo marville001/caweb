@@ -19,7 +19,6 @@ const ViewUsers = () => {
   return (
     <MainContainer>
       <PageHeaderWithBreadCamp title="All Users" crumbs={crumbs} />
-      
       <UserListingToolBar />
       <br />
       <UserListingTable customers={customers} />
