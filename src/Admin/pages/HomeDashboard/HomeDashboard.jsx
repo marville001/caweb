@@ -2,18 +2,13 @@ import { Button, Grid, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import React from "react";
 import { NavLink } from "react-router-dom";
-// import PageHeaderWithBreadCamp from "../../components/custom/PageHeaderWithBreadCamp";
 import { MainContainer } from "../../components/custom/StyledComponents";
 import { BarChart, Group } from "@mui/icons-material";
+
 const HomeDashboard = () => {
-  // const crumbs = [
-  //   <NavLink underline="hover" style={{ color: "gray" }} to="/admin">
-  //     Home
-  //   </NavLink>,
-  // ];
+
   return (
     <MainContainer>
-      {/* <PageHeaderWithBreadCamp noaction title="Dashboard" crumbs={crumbs} /> */}
       <Grid container spacing={2}>
         <Grid item xs={12} md={8}>
           <LeftTopCard>
