@@ -26,7 +26,7 @@ const DashboardWrapper = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   return (
     <DashContainer>
-      <Sidebar open={sidebarOpen} />
+      <Sidebar open={sidebarOpen} setSidebarOpen={setSidebarOpen} />
       <DashMain>
         <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <React.Suspense fallback={<ChaseLoading />}>

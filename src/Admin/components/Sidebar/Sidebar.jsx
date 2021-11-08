@@ -15,7 +15,7 @@ const genitems = [
   { to: "/admin/messages", label: "Messages", icon: <Message /> },
 ];
 
-const Sidebar = ({ open }) => {
+const Sidebar = ({ open, setSidebarOpen }) => {
   console.log({open});
   return (
     <SidebarContainer open={open}>
@@ -23,11 +23,11 @@ const Sidebar = ({ open }) => {
         <SidebarHeader>
           <h3>Welcome</h3>
         </SidebarHeader>
-        <SidebarMenuItem items={dashitems} title="Dashboard" />
-        <SidebarMenuItem items={genitems} title="General" />
-        <SidebarMenuItem />
-        <SidebarMenuItem />
-        <SidebarMenuItem />
+        <SidebarMenuItem setSidebarOpen={setSidebarOpen} items={dashitems} title="Dashboard" />
+        <SidebarMenuItem setSidebarOpen={setSidebarOpen} items={genitems} title="General" />
+        <SidebarMenuItem setSidebarOpen={setSidebarOpen} />
+        <SidebarMenuItem setSidebarOpen={setSidebarOpen} />
+        <SidebarMenuItem setSidebarOpen={setSidebarOpen} />
 
         <LogoutButton>
           <Button style={{flex: 1}} variant="contained">Logout</Button>

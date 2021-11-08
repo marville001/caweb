@@ -2,7 +2,7 @@ import { IconButton, styled } from "@mui/material";
 import React from "react";
 import { NavLink, useHistory } from "react-router-dom";
 
-const SidebarMenuItem = ({ title, items, icon: Icon }) => {
+const SidebarMenuItem = ({ title, items, icon: Icon,setSidebarOpen }) => {
   const history = useHistory();
   const { pathname } = history.location;
 
@@ -19,6 +19,7 @@ const SidebarMenuItem = ({ title, items, icon: Icon }) => {
             key={i}
             className={isActive(to) ? "nav-active" : ""}
             to={to}
+            onClick = {()=>setSidebarOpen(false)}
           >
             <ListIcon>{icon}</ListIcon>
             {label}
