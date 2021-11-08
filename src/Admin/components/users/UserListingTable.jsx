@@ -70,8 +70,11 @@ const UserListingTable = ({ customers, ...rest }) => {
 
   return (
     <Card {...rest}>
-      <Box sx={{ minWidth: 1050 }}>
-        <Table>
+      <Box sx={{ 
+        // minWidth: 1050,
+         overflowX: "scroll",
+         }}>
+        <Table sx={{overflowX: "scroll",}}>
           <TableHead>
             <TableRow>
               <TableCell padding="checkbox">

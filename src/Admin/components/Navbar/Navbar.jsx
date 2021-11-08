@@ -51,7 +51,7 @@ export default function Navbar({ sidebarOpen, setSidebarOpen }) {
         horizontal: "right",
       }}
       style={{
-        width: "200px",
+        // width: "200px",
       }}
       open={isMenuOpen}
       onClose={handleMenuClose}
@@ -88,7 +88,11 @@ export default function Navbar({ sidebarOpen, setSidebarOpen }) {
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2, display: { sm: "block", md: "none" } }}
+            sx={{ 
+              mr: 2,
+              display: { sm: "block", md: "none" },
+              transform: sidebarOpen?"translateX(280px)":""
+            }}
             onClick={() => setSidebarOpen(!sidebarOpen)}
           >
             <MenuIcon sx={{ fontSize: "30px" }} />

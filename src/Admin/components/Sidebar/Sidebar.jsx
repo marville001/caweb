@@ -16,6 +16,7 @@ const genitems = [
 ];
 
 const Sidebar = ({ open }) => {
+  console.log({open});
   return (
     <SidebarContainer open={open}>
       <div>
@@ -47,6 +48,7 @@ const SidebarContainer = styled(Box)(({ theme, open }) => ({
   borderRight: "2px solid #f5f5f1",
   transition: "all .3s linear",
   [theme.breakpoints.down("md")]: {
+    position:"fixed",
     transform: open ? "translateX(0)" : "translateX(-100%)",
     opacity: open ? 1 : 0,
     zIndex: open ? 100 : -1,
@@ -57,6 +59,7 @@ const SidebarContainer = styled(Box)(({ theme, open }) => ({
     zIndex: 100,
     width: "280px",
   },
+
 }));
 
 const SidebarHeader = styled(Box)(({ theme, open }) => ({
