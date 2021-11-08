@@ -8,6 +8,9 @@ import ChaseLoading from "../../components/Loading/ChaseLoading";
 import { Box, styled } from "@mui/material";
 
 // Pages
+const Account = React.lazy(() =>
+  import("../Account/Account")
+);
 const HomeDashboard = React.lazy(() =>
   import("../HomeDashboard/HomeDashboard")
 );
@@ -28,10 +31,15 @@ const DashboardWrapper = () => {
         <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <React.Suspense fallback={<ChaseLoading />}>
           <Switch>
-            <Route
+          <Route
               exact
               path="/admin/"
               render={(props) => <HomeDashboard {...props} />}
+            />
+            <Route
+              exact
+              path="/admin/account"
+              render={(props) => <Account {...props} />}
             />
             <Route
               path="/admin/users"
