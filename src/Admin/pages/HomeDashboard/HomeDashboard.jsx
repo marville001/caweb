@@ -7,6 +7,7 @@ import { BarChart, Group } from "@mui/icons-material";
 
 import { Users, Activity } from "react-feather";
 import UsersDoughnut from "../../components/homedashboard/UsersDoughnut";
+import EventsListing from "../../components/homedashboard/EventsListing";
 
 const HomeDashboard = () => {
   return (
@@ -97,7 +98,9 @@ const HomeDashboard = () => {
           </GraphCard>
         </Grid>
         <Grid item xs={12} md={6}>
-          <GraphCard>Graph Two</GraphCard>
+          <GraphCard>
+            <EventsListing />
+          </GraphCard>
         </Grid>
       </Grid>
     </MainContainer>

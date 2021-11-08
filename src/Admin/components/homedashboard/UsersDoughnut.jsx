@@ -59,19 +59,16 @@ const UsersDoughnut = (props) => {
     {
       title: 'ST Peters',
       value: 63,
-      icon: LaptopMacIcon,
       color: colors.indigo[500]
     },
     {
       title: 'St Angelus',
       value: 15,
-      icon: TabletIcon,
       color: colors.red[600]
     },
     {
       title: 'St Joseph',
       value: 23,
-      icon: PhoneIcon,
       color: colors.orange[600]
     }
   ];
@@ -101,7 +98,6 @@ const UsersDoughnut = (props) => {
         >
           {devices.map(({
             color,
-            icon: Icon,
             title,
             value
           }) => (
@@ -112,7 +108,6 @@ const UsersDoughnut = (props) => {
                 textAlign: 'center'
               }}
             >
-              <Icon color="action" />
               <Typography
                 color="textPrimary"
                 variant="body1"
