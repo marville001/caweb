@@ -15,11 +15,12 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import PersonIcon from "@mui/icons-material/Person";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { Button } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 const MenuItemCustom = styled(MenuItem)((theme) => ({
   fontSize: "16px",
   padding: "5px 20px",
-  paddingRight:"40px"
+  paddingRight: "40px",
 }));
 
 export default function Navbar({ sidebarOpen, setSidebarOpen }) {
@@ -56,10 +57,12 @@ export default function Navbar({ sidebarOpen, setSidebarOpen }) {
       onClose={handleMenuClose}
     >
       <MenuItemCustom onClick={handleMenuClose}>
-        <IconButton>
-          <PersonIcon />
-        </IconButton>
-        Profile
+        <NavLink to="/admin/account">
+          <IconButton>
+            <PersonIcon />
+          </IconButton>
+          Profile
+        </NavLink>
       </MenuItemCustom>
       <MenuItemCustom onClick={handleMenuClose}>
         <IconButton>
@@ -67,8 +70,12 @@ export default function Navbar({ sidebarOpen, setSidebarOpen }) {
         </IconButton>
         Settings
       </MenuItemCustom>
-      <div style={{ display: "flex", justifyContent: "center", padding:"10px" }}>
-        <Button style={{flex: 1}} variant="contained">Logout</Button>
+      <div
+        style={{ display: "flex", justifyContent: "center", padding: "10px" }}
+      >
+        <Button style={{ flex: 1 }} variant="contained">
+          Logout
+        </Button>
       </div>
     </Menu>
   );
