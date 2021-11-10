@@ -1,0 +1,84 @@
+@mixin tablet {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mini-desktop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+// .events{
+//   margin-top: 100px;
+// }
+// .events-container {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+//   gap: 10px;
+  
+//   @include phone() {
+//     padding: 20px;
+//     justify-content: center;
+//     grid-template-columns: 1fr;
+//   }
+//   .event {
+//     grid: 1;
+//     display: flex;
+//     align-items: center;
+//     margin: 15px 0px;
+//     border: 2px solid #eee;
+//     box-shadow: 2px 2px 8px rgb(136, 136, 136);
+
+//     .event-left {
+//       position: relative;
+//       width: 170px;
+//       height: 100px;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//       }
+//       .event-left-date {
+//         position: absolute;
+//         bottom: 0;
+//         right: 0;
+//         width: 50px;
+//         height: 50px;
+//         background-color: rgba(80, 80, 80, 0.7);
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: space-around;
+
+//         span {
+//           font-size: 20px;
+//           color: var(--secondary-color);
+//         }
+//       }
+//     }
+//     .event-right {
+//       padding-left: 20px;
+//       display: flex;
+//       flex-direction: column;
+//       h2 {
+//         margin-bottom: 5px;
+//       }
+//       h3 {
+//         margin-bottom: 5px;
+//         color: rgb(85, 78, 78);
+//       }
+//     }
+//   }
+// }
