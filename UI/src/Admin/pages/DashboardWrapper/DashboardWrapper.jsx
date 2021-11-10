@@ -27,7 +27,7 @@ const DashboardWrapper = () => {
   return (
     <DashContainer>
       <Sidebar open={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-      <DashMain>
+      <DashMain open={sidebarOpen}>
         <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <React.Suspense fallback={<ChaseLoading />}>
           <Switch>
@@ -74,10 +74,14 @@ const DashContainer = styled(Box)((theme) => ({
   minHeight: "100vh",
   display: "flex",
 }));
-const DashMain = styled("main")((theme) => ({
+const DashMain = styled("main")(({theme, open}) => ({
   background: "#fff",
   minHeight: "100vh",
   flex: 1,
+  marginLeft:"280px",
+  [theme.breakpoints.down("md")]: {
+    marginLeft:"0px"
+  },
 }));
 
 export default DashboardWrapper;

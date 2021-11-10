@@ -16,7 +16,6 @@ const genitems = [
 ];
 
 const Sidebar = ({ open, setSidebarOpen }) => {
-  console.log({open});
   return (
     <SidebarContainer open={open}>
       <div>
@@ -39,7 +38,7 @@ const Sidebar = ({ open, setSidebarOpen }) => {
 
 const SidebarContainer = styled(Box)(({ theme, open }) => ({
   background: "#fff",
-  position: "sticky",
+  position: "fixed",
   top: "0px",
   left: "0px",
   height: "100vh",

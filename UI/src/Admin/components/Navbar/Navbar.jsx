@@ -90,8 +90,9 @@ export default function Navbar({ sidebarOpen, setSidebarOpen }) {
             aria-label="open drawer"
             sx={{ 
               mr: 2,
+              transition: "all .3s ease",
               display: { sm: "block", md: "none" },
-              transform: sidebarOpen?"translateX(280px)":""
+              transform: {sm: sidebarOpen?"translateX(280px)":""}
             }}
             onClick={() => setSidebarOpen(!sidebarOpen)}
           >
