@@ -9,9 +9,6 @@ import {
   colors,
   useTheme
 } from '@mui/material';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import PhoneIcon from '@mui/icons-material/Phone';
-import TabletIcon from '@mui/icons-material/Tablet';
 
 const UsersDoughnut = (props) => {
   const theme = useTheme();
