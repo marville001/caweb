@@ -1,7 +1,8 @@
 {
     "db":{
-        "username":"hhfhf",
+        "username":"",
         "host":"",
         "name":""
-    }
+    },
+    "jwtSecretKey":""
 }

@@ -1,5 +1,5 @@
+require('dotenv').config()
 const express = require('express')
-const bcrypt = require('bcrypt')
 const cors = require('cors')
 
 const app = express()

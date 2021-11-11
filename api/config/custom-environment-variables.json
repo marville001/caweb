@@ -1,0 +1,8 @@
+{
+    "db":{
+        "username":"DB_USERNAME",
+        "host":"DB_HOST",
+        "name":"DB_NAME"
+    },
+    "jwtSecretKey":"JWT_SECRET_KEY"
+}
