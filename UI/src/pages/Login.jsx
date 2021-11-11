@@ -20,7 +20,7 @@ const Login = () => {
 
   return (
     <div className="login-container container">
-      <div className="login-form">
+      <div className="login-form sm">
         <h1 className="form-title">Login Here</h1>
         <div className="input-group">
           <label className="input-label">Email</label>

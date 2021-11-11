@@ -30,10 +30,23 @@
   }
 
   .login-form {
-    min-width: 400px;
+    min-width: 500px;
     @include phone() {
       min-width: auto;
       width: 100%;
+    }
+    @include tablet {
+      min-width: 700px;
+    }
+    .grid-form{
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      @include phone(){
+        grid-template-columns: 1fr;
+      }
     }
 
     .form-title {
@@ -41,27 +54,42 @@
       margin-bottom: 20px;
     }
     .input-group {
-      margin: 10px 0px;
-
-      .MuiInputBase-root,
-      .MuiSelect-select {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        height: 40px;
-      }
       input {
         font-size: 13px !important;
+      }
+
+      label{
+        font-size: 16px;
+        background-color: #f4f4f4;
       }
     }
 
     .MuiButton-root {
       height: 40px;
       font-size: 14px;
+      margin-top: 10px;
     }
 
     .or {
       text-align: center;
       margin: 20px 0px 10px;
+    }
+  }
+
+  .login-form.sm{
+    @include tablet{
+      min-width: 400px;
+    }
+
+    .input-group{
+      margin-top: 20px;
+      &:nth-child(1){
+        margin-top: 10px;
+      }
+
+      .MuiTextField-root{
+        margin-top: 10px !important;
+      }
     }
   }
 }
