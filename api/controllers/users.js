@@ -1,5 +1,5 @@
 module.exports = {
-    getOneUser = (req, res)=>{
+    getOneUser : (req, res)=>{
         res.send("Users...")
     }
 }

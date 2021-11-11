@@ -1,5 +1,5 @@
 const sqlPool = require('./sqlPool');
-const get = require('../lib/get');
+const get = require('lodash/get');
 
 module.exports = {
     query: async (query) => {
