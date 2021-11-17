@@ -6,7 +6,7 @@ module.exports = {
   login: (req, res) => {
     res.send("Login user..");
   },
-  register: (req, res) => {
+  register: async (req, res) => {
     try {
       const { email, name, phone, password, school, course, gender, role } =
         req.body;
