@@ -6,11 +6,10 @@ import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import ChaseLoading from "../../components/Loading/ChaseLoading";
 import { Box, styled } from "@mui/material";
+import AddUser from "../AddUser/AddUser";
 
 // Pages
-const Account = React.lazy(() =>
-  import("../Account/Account")
-);
+const Account = React.lazy(() => import("../Account/Account"));
 const HomeDashboard = React.lazy(() =>
   import("../HomeDashboard/HomeDashboard")
 );
@@ -31,7 +30,7 @@ const DashboardWrapper = () => {
         <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <React.Suspense fallback={<ChaseLoading />}>
           <Switch>
-          <Route
+            <Route
               exact
               path="/admin/"
               render={(props) => <HomeDashboard {...props} />}
@@ -42,8 +41,14 @@ const DashboardWrapper = () => {
               render={(props) => <Account {...props} />}
             />
             <Route
+              exact
               path="/admin/users"
               render={(props) => <ViewUsers {...props} />}
+            />
+            <Route
+              exact
+              path="/admin/users/new"
+              render={(props) => <AddUser {...props} />}
             />
             <Route
               path="/admin/events"
@@ -74,13 +79,13 @@ const DashContainer = styled(Box)((theme) => ({
   minHeight: "100vh",
   display: "flex",
 }));
-const DashMain = styled("main")(({theme, open}) => ({
+const DashMain = styled("main")(({ theme, open }) => ({
   background: "#fff",
   minHeight: "100vh",
   flex: 1,
-  marginLeft:"280px",
+  marginLeft: "280px",
   [theme.breakpoints.down("md")]: {
-    marginLeft:"0px"
+    marginLeft: "0px",
   },
 }));
 

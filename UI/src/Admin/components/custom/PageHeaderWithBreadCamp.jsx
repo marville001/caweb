@@ -2,6 +2,7 @@ import React from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import { styled } from "@mui/material/styles";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const PageHeaderWithBreadCamp = ({ action, title, crumbs, noaction }) => {
   return (
@@ -21,9 +22,10 @@ const PageHeaderWithBreadCamp = ({ action, title, crumbs, noaction }) => {
               style={{
                 marginRight: "20px",
                 fontSize: "14px",
-                padding: "5px 25px",
+                padding: "5px 25px"
               }}
               variant="contained"
+              href="/admin/users/new"
             >
               Add User
             </Button>
